@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TerminusPage = () => {
   return (
     <div className="map-page">

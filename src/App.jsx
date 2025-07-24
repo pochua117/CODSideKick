@@ -9,7 +9,7 @@ import LibertyFallsPage from './maps/LibertyFallsPage.jsx'
 
 function App() {
   const MAPS = [
-    { Text: 'Citadelle', Image: 'Citadelle_des_Morts.jpg', Link: '/maps/CitadellePage' },
+    { Text: 'Citadelle', Image: 'Citadelle_des_Morts.jpg', Link: '/maps/citadelle' },
     { Text: 'Terminus', Image: 'terminus.jpg', Link: '/maps/terminus' },
     { Text: 'The Tomb', Image: 'tomb.jpg', Link: '/maps/tomb' },
     { Text: 'Liberty Falls', Image: 'liberty.jpg', Link: '/maps/liberty-falls' },

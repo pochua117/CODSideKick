@@ -2,19 +2,9 @@ import './App.css'
 import MapCard from './components/MapCard'
 import { Routes, Route } from 'react-router-dom'
 
-import CitadellePage from './maps/CitadellePage.jsx'
-import TerminusPage from './maps/TerminusPage.jsx'
-import TombPage from './maps/TombPage.jsx'
-import LibertyFallsPage from './maps/LibertyFallsPage.jsx'
+import { MAPS } from './constants.js'
 
 function App() {
-  const MAPS = [
-    { Text: 'Citadelle', Image: 'Citadelle_des_Morts.jpg', Link: '/maps/citadelle' },
-    { Text: 'Terminus', Image: 'terminus.jpg', Link: '/maps/terminus' },
-    { Text: 'The Tomb', Image: 'tomb.jpg', Link: '/maps/tomb' },
-    { Text: 'Liberty Falls', Image: 'liberty.jpg', Link: '/maps/liberty-falls' },
-  ]
-
   return (
     <Routes>
       <Route
@@ -34,10 +24,9 @@ function App() {
           </main>
         }
       />
-      <Route path="/maps/citadelle" element={<CitadellePage />} />
-      <Route path="/maps/terminus" element={<TerminusPage />} />
-      <Route path="/maps/tomb" element={<TombPage />} />
-      <Route path="/maps/liberty-falls" element={<LibertyFallsPage />} />
+      {MAPS.map((map, index) => (
+        <Route path={map.Link} element={<map.Component/>} />
+      ))}
     </Routes>
   )
 }

@@ -1,34 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import MapCard from './components/MapCard'
+import { Routes, Route } from 'react-router-dom'
+
+import CitadellePage from './maps/CitadellePage.jsx'
+import TerminusPage from './maps/TerminusPage.jsx'
+import TombPage from './maps/TombPage.jsx'
+import LibertyFallsPage from './maps/LibertyFallsPage.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const MAPS = [
+    { Text: 'Citadelle', Image: 'Citadelle_des_Morts.jpg', Link: '/maps/CitadellePage' },
+    { Text: 'Terminus', Image: 'terminus.jpg', Link: '/maps/terminus' },
+    { Text: 'The Tomb', Image: 'tomb.jpg', Link: '/maps/tomb' },
+    { Text: 'Liberty Falls', Image: 'liberty.jpg', Link: '/maps/liberty-falls' },
+  ]
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <main className="App">
+            <section className="map-list">
+              {MAPS.map((map, index) => (
+                <MapCard
+                  key={index}
+                  Text={map.Text}
+                  Image={map.Image}
+                  Link={map.Link}
+                />
+              ))}
+            </section>
+          </main>
+        }
+      />
+      <Route path="/maps/citadelle" element={<CitadellePage />} />
+      <Route path="/maps/terminus" element={<TerminusPage />} />
+      <Route path="/maps/tomb" element={<TombPage />} />
+      <Route path="/maps/liberty-falls" element={<LibertyFallsPage />} />
+    </Routes>
   )
 }
 

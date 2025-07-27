@@ -1,7 +1,7 @@
 const InputBox = ({ setFunction, value}) => {
   return (
     <input 
-      type="text" 
+      type="number" 
       value={value} 
       onChange={e => {
         const cleanVal = e.target.value.replace(/\D/g, '')

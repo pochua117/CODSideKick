@@ -9,9 +9,9 @@ const CitadellePage = () => {
     <section className="section-numbers">
       <h2>BeamSmasher puzzle solver</h2>
       <div className="input-group">
-        <InputBox setFunction={setX} value={X} placeholder="Número 1" />
-        <InputBox setFunction={setY} value={Y} placeholder="Número 2" />
-        <InputBox setFunction={setZ} value={Z} placeholder="Número 3" />
+        <InputBox setFunction={setX} value={X}/>
+        <InputBox setFunction={setY} value={Y}/>
+        <InputBox setFunction={setZ} value={Z}/>
       </div>
 
       <div className="result">Result 1: {resultado1}</div>

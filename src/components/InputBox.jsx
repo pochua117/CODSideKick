@@ -1,4 +1,4 @@
-const InputBox = ({ setFunction, value, placeholder }) => {
+const InputBox = ({ setFunction, value}) => {
   return (
     <input 
       type="text" 
@@ -9,7 +9,6 @@ const InputBox = ({ setFunction, value, placeholder }) => {
           setFunction(cleanVal)
         }
       }} 
-      placeholder={placeholder}
     />
   )
 }

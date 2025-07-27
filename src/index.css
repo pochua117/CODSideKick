@@ -1,43 +1,53 @@
-.App .map-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
-.map-page{
-  width: fit-content;
-  margin: auto;
-}
-
-.App{
-  width: fit-content;
-  margin: auto;
-}
-
-.card {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 32px;
-  border: 15px solid rgb(22, 22, 22);
-  height: 300px;
-  width: 640px;
-  transition: transform 0.2s ease-in-out;
-}
-
-body {  
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(36, 36, 36);
+  background-color: #242424;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Grid de tarjetas */
+.map-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjeta */
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 4px solid #444;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .card-image {
@@ -52,107 +62,115 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 16px;
   filter: brightness(0.6);
+  transition: filter 0.2s;
 }
-.map-list .card:hover .card-image img {
-  filter: brightness(0.7);
-}
-.map-list .card:hover{
-  cursor: pointer;
-  transform: scale(1.05);
+
+.card:hover .card-image img {
+  filter: brightness(0.8);
 }
 
 .card-text {
   z-index: 1;
-  padding: 10rem;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
   color: white;
-  position: absolute;
-  font-size: 50px;
-  font-family: "monserrat", sans-serif;
-  padding: 0;
-  margin: 0;
+  padding: 0 10px;
 }
 
-.map-card{
+/* Página individual */
+.map-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.map-card {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 32px;
-  border: 15px solid rgb(46, 46, 46);
-  height: 100vh;
-  width: 640px;
-  background-color: rgb(15, 15, 15);
+  border-radius: 24px;
+  border: 4px solid #444;
+  height: 80vh;
+  background-color: #1a1a1a;
+  overflow: hidden;
 }
 
 .map-card-text {
   z-index: 1;
+  font-size: 48px;
+  font-weight: 700;
   color: white;
-  font-size: 50px;
-  font-family: "monserrat", sans-serif;
-  padding: 0;
-  margin: 0;
-}
-.map-card-header{
-  display: flex;
-  font-size: 20px;
-  margin-left: -100px;
+  text-align: center;
 }
 
-.map-card-header .close-button{
+.map-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.map-card-header h1 {
+  font-size: 28px;
+  flex: 1;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.close-button {
   background: transparent;
-  border: 2px solid #eee;
-  color: #eee;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  transition: 0.2s;
-  font-weight: bold;
+  border: 2px solid #ccc;
+  color: #ccc;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s;
   cursor: pointer;
 }
 
-.map-card-header h1{
-  width: 100%;
-  text-align: center;
+.close-button:hover {
+  background: #ccc;
+  color: #242424;
 }
 
-
-/* Contenedor general */
+/* Sección de números */
 .section-numbers {
   padding: 32px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: #2a2a2a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
   max-width: 500px;
   margin: auto;
 }
 
-/* Título */
 .section-numbers h2 {
   margin-bottom: 24px;
-  color: #333;
+  color: #fff;
 }
 
-/* Inputs alineados como cuadrados */
+/* Inputs como cuadrados */
 .input-group {
   display: flex;
   justify-content: center;
-  gap: 16px; /* espacio entre inputs */
+  gap: 16px;
   margin-bottom: 24px;
 }
 
 .input-group input {
-  width: 150px;
-  height: 150px;
-  font-size: 48px; /* tamaño de texto igual para todos */
-  border: 2px solid #ccc;
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  border: 2px solid #888;
   border-radius: 12px;
   text-align: center;
-  transition: border 0.2s;
   background: #fff;
+  color: #000;
   font-weight: bold;
+  transition: border 0.2s;
 }
 
 .input-group input:focus {
@@ -162,12 +180,11 @@ body {
 
 /* Resultados */
 .result {
-  font-size: 24px;
-  color: #222;
-  background: #e0e0e0;
+  font-size: 20px;
+  color: #eee;
+  background: #333;
   padding: 12px;
   border-radius: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
-

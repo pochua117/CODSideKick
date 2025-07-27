@@ -1,9 +1,23 @@
+import { useNumbers } from '../utils/Citadelle/utils.js' 
+import InputBox from '../components/InputBox.jsx'
+
+
 const CitadellePage = () => {
+  const { X, setX, Y, setY, Z, setZ, resultado1, resultado2, resultado3 } = useNumbers()
+
   return (
-    <div className="map-page">
-      <h1>Citadelle</h1>
-      {/* Contenido específico de Citadelle */}
-    </div>
+    <section className="section-numbers">
+      <h2>BeamSmasher puzzle solver</h2>
+      <div className="input-group">
+        <InputBox setFunction={setX} value={X} placeholder="Número 1" />
+        <InputBox setFunction={setY} value={Y} placeholder="Número 2" />
+        <InputBox setFunction={setZ} value={Z} placeholder="Número 3" />
+      </div>
+
+      <div className="result">Result 1: {resultado1}</div>
+      <div className="result">Result 2: {resultado2}</div>
+      <div className="result">Result 3: {resultado3}</div>
+    </section>
   )
 }
 

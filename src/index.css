@@ -4,12 +4,17 @@
   gap: 30px;
 }
 
+.map-page{
+  width: fit-content;
+  margin: auto;
+}
+
 .App{
   width: fit-content;
   margin: auto;
 }
 
-.map-list .card {
+.card {
   position: relative;
   display: flex;
   justify-content: center;
@@ -50,10 +55,10 @@ body {
   border-radius: 16px;
   filter: brightness(0.6);
 }
-.card:hover .card-image img {
+.map-list .card:hover .card-image img {
   filter: brightness(0.7);
 }
-.card:hover{
+.map-list .card:hover{
   cursor: pointer;
   transform: scale(1.05);
 }
@@ -68,3 +73,101 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.map-card{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  border: 15px solid rgb(46, 46, 46);
+  height: 100vh;
+  width: 640px;
+  background-color: rgb(15, 15, 15);
+}
+
+.map-card-text {
+  z-index: 1;
+  color: white;
+  font-size: 50px;
+  font-family: "monserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.map-card-header{
+  display: flex;
+  font-size: 20px;
+  margin-left: -100px;
+}
+
+.map-card-header .close-button{
+  background: transparent;
+  border: 2px solid #eee;
+  color: #eee;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  transition: 0.2s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.map-card-header h1{
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Contenedor general */
+.section-numbers {
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Título */
+.section-numbers h2 {
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Inputs alineados como cuadrados */
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* espacio entre inputs */
+  margin-bottom: 24px;
+}
+
+.input-group input {
+  width: 150px;
+  height: 150px;
+  font-size: 48px; /* tamaño de texto igual para todos */
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  transition: border 0.2s;
+  background: #fff;
+  font-weight: bold;
+}
+
+.input-group input:focus {
+  border-color: #6666ff;
+  outline: none;
+}
+
+/* Resultados */
+.result {
+  font-size: 24px;
+  color: #222;
+  background: #e0e0e0;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+

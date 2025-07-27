@@ -1,8 +1,10 @@
 import './App.css'
-import MapCard from './components/MapCard'
 import { Routes, Route } from 'react-router-dom'
 
+import MapCard from './components/MapCard'
 import { MAPS } from './constants.js'
+
+import MapPageContent from './components/MapPageContent.jsx'
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
         }
       />
       {MAPS.map((map, index) => (
-        <Route path={map.Link} element={<map.Component/>} />
+        <Route path={map.Link} element={<MapPageContent mapName={map.Text} ><map.Component/></MapPageContent>} />
       ))}
     </Routes>
   )

@@ -6,7 +6,7 @@ const InputBox = ({ setFunction, value}) => {
       onChange={e => {
         const cleanVal = e.target.value.replace(/\D/g, '')
         if (cleanVal.length <= 2) {
-          setFunction(cleanVal)
+          setFunction(String(cleanVal))
         }
       }} 
     />

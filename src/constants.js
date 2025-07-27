@@ -23,19 +23,8 @@ export const MAPS = [
     Link: "/maps/liberty",
     Component: LibertyFallsPage,
   },
-  { Text: "Liberty Falls",
-    Image: "liberty.jpg",
-    Link: "/maps/liberty",
-    Component: LibertyFallsPage,
-  },
-  { Text: "Liberty Falls",
-    Image: "liberty.jpg",
-    Link: "/maps/liberty",
-    Component: LibertyFallsPage,
-  },
 
 ]
-
 //frutas = ["Pera", "Manzana", "Platano"]
 
 //for frutas in frutas:

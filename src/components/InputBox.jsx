@@ -1,13 +1,12 @@
 const InputBox = ({ setFunction, value}) => {
   return (
     <input 
-      type="number" 
+      type="text" 
       value={value} 
       onChange={e => {
         const cleanVal = e.target.value.replace(/\D/g, '')
-        if (cleanVal.length <= 2) {
-          setFunction(String(cleanVal))
-        }
+        const trimmed = cleanVal.slice(0, 2)     // forzar a máximo 2 dígitos
+        setFunction(trimmed)
       }} 
     />
   )

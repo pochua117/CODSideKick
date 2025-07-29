@@ -16,7 +16,7 @@ const CitadellePage = () => {
 
       <div className="result">Result 1: {resultado1}</div>
       <div className="result">Result 2: {resultado2}</div>
-      <div className="result">Result 3: {resultado3}</div>
+      <h2 className="result">Result 3: {resultado3}</h2>
       <div className="result">Testgit push origin development: {X + Y + Z}</div>
     </section>
   )

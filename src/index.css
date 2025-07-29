@@ -237,3 +237,7 @@ body {
     font-size: 18px;
   }
 }
+
+.result {
+  transform: translateZ(0); /* fuerza render GPU */
+}

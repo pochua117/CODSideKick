@@ -7,6 +7,7 @@ const InputBox = ({ setFunction, value}) => {
         const cleanVal = e.target.value.replace(/\D/g, '')
         const trimmed = cleanVal.slice(0, 2)     // forzar a máximo 2 dígitos
         setFunction(trimmed)
+        console.log("Valor input: ",value, '->', trimmed) // Log para depuración
       }} 
     />
   )

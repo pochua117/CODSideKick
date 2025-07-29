@@ -9,7 +9,6 @@ export function useNumbers() {
   const resultado2 = (Number(Z)*2 + Number(Y) - 5)
   const resultado3 = (Number(Y) + Number(Z) - Number(X))
 
-  console.log("Resultados calculados:", resultado1, resultado2, resultado3) // Log para depuración
   return {
     X, setX,
     Y, setY,

@@ -17,7 +17,11 @@ const CitadellePage = () => {
       <div className="result">Result 1: {resultado1}</div>
       <div className="result">Result 2: {resultado2}</div>
       <h2 className="result">Result 3: {resultado3}</h2>
-      <div className="result">Testgit push origin development: {X + Y + Z}</div>
+      <script>
+        {console.log("1: ",resultado1, typeof resultado1)}
+        {console.log("2: ",resultado2, typeof resultado2)}
+        {console.log("3: ",resultado3, typeof resultado3)}
+      </script>
     </section>
   )
 }

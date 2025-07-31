@@ -1,27 +1,46 @@
 /* Fuente moderna */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #242424;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #121212;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+/* Contenedor principal */
 .App {
   width: 100%;
   max-width: 1400px;
+  padding: 0 20px;
+  text-align: center;
   margin: auto;
-  padding: 40px 20px;
+}
+
+/* Título llamativo */
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #66ccff, #9966ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtítulo opcional */
+.subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #bbbbbb;
+  margin-bottom: 40px;
 }
 
 /* Grid de tarjetas */
@@ -29,9 +48,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  justify-content: center;
+  align-content: center;  /* Centra verticalmente */
+  min-height: 80vh;      /* O altura deseada */
 }
 
-/* Tarjeta */
+/* Tarjeta individual */
 .card {
   position: relative;
   display: flex;
@@ -43,6 +65,7 @@ body {
   border: 4px solid #444;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  background-color: #1f1f1f;
 }
 
 .card:hover {
@@ -189,14 +212,24 @@ body {
   font-weight: 500;
 }
 
+/* Responsive móvil */
 @media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
   .map-list {
-    grid-template-columns: 1fr; /* Solo una columna */
+    grid-template-columns: 1fr;
   }
 
   .card {
-    width: 100%; /* Que se ajuste al ancho disponible */
-    height: 220px; /* Un poco más bajo para móvil */
+    width: 100%;
+    height: 220px;
   }
 
   .card-text {

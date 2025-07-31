@@ -13,6 +13,7 @@ function App() {
         path="/"
         element={
           <main className="App">
+            <h1 className='title'>CODSideKick</h1>
             <section className="map-list">
               {MAPS.map((map, index) => (
                 <MapCard

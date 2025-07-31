@@ -237,8 +237,3 @@ body {
     font-size: 18px;
   }
 }
-
-.result {
-  will-change: contents;
-  transform: translateZ(0); /* fuerza repintado GPU */
-}

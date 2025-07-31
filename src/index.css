@@ -239,5 +239,6 @@ body {
 }
 
 .result {
-  transform: translateZ(0); /* fuerza render GPU */
+  will-change: contents;
+  transform: translateZ(0); /* fuerza repintado GPU */
 }

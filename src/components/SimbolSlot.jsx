@@ -11,7 +11,7 @@ const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images }) => {
       }
        }}
        onClick={(e) => {
-        onDrop(id.id)
+        onDrop(id)
        }}
      >
        {symbolId !== null ? (

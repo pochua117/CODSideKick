@@ -2,9 +2,10 @@ import SimbolSlot from './SimbolSlot'
 import { handleDrop, allowDrop } from '../utils/Citadelle/utils'
 import { selectedStates } from '../utils/Citadelle/utils'
 
-const SimbolSlots = () => {
+const SimbolSlots = (id) => {
 
   const {selected, setSelected} = selectedStates()
+  
   
   return (
     <section className="section-selected">
@@ -14,6 +15,7 @@ const SimbolSlots = () => {
             symbolId={symbolId}
             onDrop={(symbolId) => handleDrop(index, symbolId, selected, setSelected)}
             allowDrop={allowDrop}
+            id = {id}
           />
         ))}
     </section>

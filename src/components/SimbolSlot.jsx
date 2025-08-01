@@ -1,5 +1,5 @@
 
-const SimbolSlot = ({ symbolId, onDrop, allowDrop }) => {
+const SimbolSlot = ({ symbolId, onDrop, allowDrop, id }) => {
     return (
     <div
        className="drop-slot"
@@ -7,6 +7,9 @@ const SimbolSlot = ({ symbolId, onDrop, allowDrop }) => {
        onDrop={(e) => {
         const draggedId = parseInt(e.dataTransfer.getData("symbolId"))
         onDrop(draggedId)
+       }}
+       onClick={(e) => {
+        onDrop(id.id)
        }}
      >
        {symbolId !== null ? (

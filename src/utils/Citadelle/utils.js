@@ -26,6 +26,7 @@ export function selectedStates() {
 
 export const handleDrop = (index, symbolId, selected, setSelected) => {
     const newSelection = [...selected]
+    console.log(symbolId)
     newSelection[index] = symbolId
     setSelected(newSelection)
   }

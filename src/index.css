@@ -387,3 +387,72 @@ body {
     height: 40px;
   }
 }
+
+@media (max-width: 950px) and (orientation: landscape) {
+  .title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .map-list {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en horizontal */
+    gap: 16px;
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .card-text {
+    font-size: 20px;
+  }
+
+  .map-card {
+    height: 60vh;
+  }
+
+  .map-card-header h1 {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .close-button {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .simbols-title {
+    font-size: 22px;
+  }
+
+  .simbols-section {
+    grid-template-columns: repeat(10, 1fr); /* Más columnas para aprovechar el ancho */
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .simbol-image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .section-selected {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .drop-slot {
+    width: 36px;
+    height: 36px;
+  }
+
+  .input-group input {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .result {
+    font-size: 16px;
+  }
+}

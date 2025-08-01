@@ -6,7 +6,9 @@ const SimbolSlot = ({ symbolId, onDrop, allowDrop, id }) => {
        onDragOver={allowDrop}
        onDrop={(e) => {
         const draggedId = parseInt(e.dataTransfer.getData("symbolId"))
+        if (!isNaN(draggedId)) {
         onDrop(draggedId)
+      }
        }}
        onClick={(e) => {
         onDrop(id.id)

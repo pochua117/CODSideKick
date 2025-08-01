@@ -18,3 +18,18 @@ export function useNumbers() {
     resultado3,
   }
 }
+
+export function selectedStates() {
+  const [selected, setSelected] = useState(Array(6).fill(null)) // 6 espacios vacíos
+  return {selected, setSelected}
+}
+
+export const handleDrop = (index, symbolId, selected, setSelected) => {
+    const newSelection = [...selected]
+    newSelection[index] = symbolId
+    setSelected(newSelection)
+  }
+
+export const allowDrop = (e) => {
+    e.preventDefault()
+  }

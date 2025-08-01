@@ -19,8 +19,8 @@ export function useNumbers() {
   }
 }
 
-export function selectedStates() {
-  const [selected, setSelected] = useState(Array(6).fill(null)) // 6 espacios vacíos
+export function selectedStates(length) {
+  const [selected, setSelected] = useState(Array(length).fill(null)) // 6 espacios vacíos
   return {selected, setSelected}
 }
 

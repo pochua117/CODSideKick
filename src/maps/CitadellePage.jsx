@@ -1,31 +1,25 @@
-import SimbolSlots from '../components/SimbolSlots'
 import { useState } from 'react'
+import SimbolsPuzzle from '../components/SimbolsPuzzle'
+import PuzzleButton from '../components/PuzzleButton'
 
 const CitadellePage = () => {
-  const simbols = Array.from({ length: 20 }, (_, i) => i)
-  const [Id, setId] = useState(0)
-  
-  const handleDragStart = (e, symbolId) => {
-    e.dataTransfer.setData("symbolId", symbolId)
-  }
+  const [activeTab, setActiveTab] = useState('puzzle1')
 
   return (
     <div className="container">
-      <h2 className="simbols-title">Simbols Puzzle Solver</h2>
-      <section className="simbols-section">
-        {simbols.map(i => (
-          <img
-            key={i}
-            className="simbol-image"
-            src={`../images/simbols/signo_${i}.jpg`}
-            alt={`Signo ${i}`}
-            draggable
-            onDragStart={(e) => handleDragStart(e, i)}
-            onClick={() => setId(i)}
-          />
-        ))}
-      </section>
-      <SimbolSlots id = {Id}/>  
+      <div className="tab-buttons">
+        <PuzzleButton name="Simbols" puzzle={1} states={[activeTab, setActiveTab]}/>
+        <PuzzleButton name="Traps" puzzle={2} states={[activeTab, setActiveTab]}/>
+      </div>
+
+      <div className="tab-content">
+        <div className={activeTab === 'puzzle1' ? 'puzzle-visible' : 'puzzle-hidden'}>
+          <SimbolsPuzzle name = {"Simbols"} length={20} resultlenght={6} images="../images/simbols/" />
+        </div>
+        <div className={activeTab === 'puzzle2' ? 'puzzle-visible' : 'puzzle-hidden'}>
+          <SimbolsPuzzle name = {"Traps"} length={4} resultlenght={4} images="../images/traps/" />
+        </div>
+      </div>
     </div>
   )
 }

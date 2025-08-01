@@ -7,7 +7,7 @@ const TerminusPage = () => {
 
   return (
     <section className="section-numbers">
-      <h2>BeamSmasher puzzle solver</h2>
+      <h2 translate='no'>BeamSmasher puzzle solver</h2>
       <div className="input-group">
         <InputBox setFunction={setX} value={X}/>
         <InputBox setFunction={setY} value={Y}/>

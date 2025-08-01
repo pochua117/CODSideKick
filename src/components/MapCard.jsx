@@ -9,7 +9,7 @@ const MapCard = ({Text, Image = 'https://picsum.photos/id/10/200/300', Link: lin
         <div className='card-image'>
           <img src={finalImage} alt={Text} />
         </div>
-        <div className='card-text'>{Text}</div>
+        <div translate="no" className='card-text'>{Text}</div>
       </article>
       </Link>
     )

@@ -5,7 +5,7 @@ const MapPageContent = ({children, mapName}) => {
       <section className='map-page'>
       <header className='map-card-header'>
         <Link to="/" className='close-button'>Back</Link>
-        <h1>{mapName}</h1>
+        <h1 translate='no'>{mapName}</h1>
       </header>
       <article className='map-card'>
         {children}

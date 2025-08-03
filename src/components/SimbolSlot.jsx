@@ -17,8 +17,12 @@ const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images }) => {
        {symbolId !== null ? (
          <img
            className="simbol-selected-image"
-           src={`${images}signo_${symbolId}.jpg`}
+           src={`${images}signo_${symbolId}.png`}
            alt={`Signo ${symbolId}`}
+           onError={(e) => {
+              e.target.onerror = null
+              e.target.src = `${images}signo_${symbolId}.jpg`
+            }}
          />
        ) : (
          <div className="empty-slot"></div>

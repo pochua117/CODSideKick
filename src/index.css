@@ -240,7 +240,7 @@ body {
   border-radius: 8px;
   cursor: grab;
   transition: transform 0.2s, border-color 0.2s;
-  background-color: #fff;
+  background-color: #504d4a;
 }
 
 .simbol-image:hover {

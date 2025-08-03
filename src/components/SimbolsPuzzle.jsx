@@ -17,11 +17,15 @@ const SimbolsPuzzle = ({name ,length, resultlenght, images}) => {
               <img
                 key={i}
                 className="simbol-image"
-                src={`${images}signo_${i}.jpg`}
+                src={`${images}signo_${i}.png`}
                 alt={`Signo ${i}`}
                 draggable
                 onDragStart={(e) => handleDragStart(e, i)}
                 onClick={() => setId(i)}
+                onError={(e) => {
+              e.target.onerror = null
+              e.target.src = `${images}signo_${i}.jpg`
+            }}
               />
             ))}
           </section>

@@ -10,6 +10,8 @@ const CitadellePage = () => {
       <div className="tab-buttons">
         <PuzzleButton name="Simbols" puzzle={1} states={[activeTab, setActiveTab]}/>
         <PuzzleButton name="Traps" puzzle={2} states={[activeTab, setActiveTab]}/>
+        <PuzzleButton name="Swords" puzzle={3} states={[activeTab, setActiveTab]}/>
+        <PuzzleButton name="Crow" puzzle={4} states={[activeTab, setActiveTab]}/>
       </div>
 
       <div className="tab-content">
@@ -18,6 +20,11 @@ const CitadellePage = () => {
         </div>
         <div className={activeTab === 'puzzle2' ? 'puzzle-visible' : 'puzzle-hidden'}>
           <SimbolsPuzzle name = {"Traps"} length={4} resultlenght={4} images="../images/traps/" />
+        </div>
+        <div className={activeTab === 'puzzle3' ? 'puzzle-visible' : 'puzzle-hidden'}>
+          <SimbolsPuzzle name = {"Swords"} length={4} resultlenght={4} images="../images/animals/" />
+        </div>
+        <div className={activeTab === 'puzzle4' ? 'puzzle-visible' : 'puzzle-hidden'}>
         </div>
       </div>
     </div>

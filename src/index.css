@@ -221,9 +221,8 @@ body {
 /* Sección de símbolos disponibles */
 .simbols-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 12px;
-  max-width: 500px;
   margin-bottom: 40px;
   padding: 20px;
   background-color: #2a2a2a;
@@ -233,8 +232,8 @@ body {
 
 /* Imagen de símbolo disponible */
 .simbol-image {
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   border: 2px solid #888;
   border-radius: 8px;
@@ -261,8 +260,8 @@ body {
 
 /* Contenedor de espacio seleccionable */
 .drop-slot {
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   border: 2px dashed #aaa;
   border-radius: 8px;
   display: flex;
@@ -529,8 +528,8 @@ body {
   }
 
   .drop-slot {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
 
   .input-group input {

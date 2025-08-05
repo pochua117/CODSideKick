@@ -351,6 +351,11 @@ body {
 
 /* Responsive móvil */
 @media (max-width: 768px) {
+  .tab-buttons button {
+  width: 90px;
+  font-size: 20px;
+  }
+
   .title {
     font-size: 36px;
   }
@@ -416,7 +421,7 @@ body {
   }
 
   .simbols-section {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
     gap: 8px;
     padding: 12px;
   }
@@ -612,13 +617,7 @@ body {
     padding: 12px;
   }
 
-  .simbol-image {
-    width: 30px;
-    height: 30px;
-  }
-
-  .drop-slot {
-    width: 30px;
-    height: 30px;
+  .section-selected {
+    gap: 6px;
   }
 }

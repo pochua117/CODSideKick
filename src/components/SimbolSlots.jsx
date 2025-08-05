@@ -17,7 +17,7 @@ const SimbolSlots = ({id, images, length, type}) => {
             allowDrop={allowDrop}
             id = {id}
             images={images}
-            tyoe={type}
+            type={type}
           />
         ))}
     </section>

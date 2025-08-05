@@ -32,11 +32,9 @@ function App() {
           key={index}
           path={map.Link}
           element={
-            <Suspense fallback={<div>Cargando...</div>}>
               <MapPageContent mapName={map.Text}>
                 <map.Component />
               </MapPageContent>
-            </Suspense>
           }
         />
       ))}

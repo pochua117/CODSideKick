@@ -317,9 +317,8 @@ body {
 
 .tab-buttons button {
   display: flex;
-  width: 75px;
   justify-content: center;
-  font-size: 15px;
+  font-size: 20px;
   padding: 10px 20px;
   border: 2px solid #666;
   background: transparent;
@@ -438,10 +437,13 @@ body {
   }
 }
 
+
+
 @media (max-width: 500px) {
-  .tab-buttons {
-    gap: 8px;
-  }
+  .tab-buttons button {
+  width: 75px;
+  font-size: 15px;
+}
 
   .title {
     font-size: 36px;
@@ -598,3 +600,25 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .tab-buttons button {
+  width: 63px;
+  font-size: 15px;
+  }
+  
+  .simbols-section {
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .simbol-image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .drop-slot {
+    width: 30px;
+    height: 30px;
+  }
+}

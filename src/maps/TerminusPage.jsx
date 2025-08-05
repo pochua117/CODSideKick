@@ -1,5 +1,6 @@
 import { useNumbers } from '../utils/Citadelle/utils.js' 
 import InputBox from '../components/InputBox.jsx'
+import React, { lazy, Suspense } from 'react';
 
 
 const TerminusPage = () => {

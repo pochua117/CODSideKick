@@ -1,5 +1,5 @@
 
-const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images }) => {
+const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images, type }) => {
     return (
     <div
        className="drop-slot"
@@ -17,12 +17,8 @@ const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images }) => {
        {symbolId !== null ? (
          <img
            className="simbol-selected-image"
-           src={`${images}signo_${symbolId}.png`}
+           src={`${images}signo_${symbolId}.${type}`}
            alt={`Signo ${symbolId}`}
-           onError={(e) => {
-              e.target.onerror = null
-              e.target.src = `${images}signo_${symbolId}.jpg`
-            }}
          />
        ) : (
          <div className="empty-slot"></div>

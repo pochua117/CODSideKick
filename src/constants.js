@@ -1,17 +1,14 @@
-import CitadellePage from './maps/CitadellePage.jsx'
-import TerminusPage from './maps/TerminusPage.jsx'
-
 export const MAPS = [
-  { Text: 
-    'Terminus', 
-    Image: 'terminus.jpg', 
+  {
+    Text: 'Terminus',
+    Image: 'terminus.jpg',
     Link: '/maps/terminus',
-    Component: TerminusPage 
+    ComponentPath: './maps/TerminusPage.jsx'
   },
-  { 
-    Text: 'Citadelle Des Morts', 
-    Image: 'citadelle.jpg', 
-    Link: '/maps/citadelle', 
-    Component: CitadellePage 
+  {
+    Text: 'Citadelle Des Morts',
+    Image: 'citadelle.jpg',
+    Link: '/maps/citadelle',
+    ComponentPath: './maps/CitadellePage.jsx'
   },
-]
+];

@@ -2,7 +2,7 @@ import SimbolSlot from './SimbolSlot'
 import { handleDrop, allowDrop } from '../utils/Citadelle/utils'
 import { selectedStates } from '../utils/Citadelle/utils'
 
-const SimbolSlots = ({id, images, length}) => {
+const SimbolSlots = ({id, images, length, type}) => {
 
   const {selected, setSelected} = selectedStates(length)
   
@@ -17,6 +17,7 @@ const SimbolSlots = ({id, images, length}) => {
             allowDrop={allowDrop}
             id = {id}
             images={images}
+            tyoe={type}
           />
         ))}
     </section>

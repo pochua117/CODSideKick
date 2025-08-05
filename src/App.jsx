@@ -1,3 +1,4 @@
+// App.jsx
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -26,24 +27,19 @@ function App() {
           </main>
         }
       />
-      {MAPS.map((map, index) => {
-        // Lazy carga el componente usando import dinámico
-        const LazyComponent = lazy(() => import(`${map.ComponentPath}`));
-
-        return (
-          <Route
-            key={index}
-            path={map.Link}
-            element={
-              <Suspense fallback={<div>Cargando...</div>}>
-                <MapPageContent mapName={map.Text}>
-                  <LazyComponent />
-                </MapPageContent>
-              </Suspense>
-            }
-          />
-        );
-      })}
+      {MAPS.map((map, index) => (
+        <Route
+          key={index}
+          path={map.Link}
+          element={
+            <Suspense fallback={<div>Cargando...</div>}>
+              <MapPageContent mapName={map.Text}>
+                <map.Component />
+              </MapPageContent>
+            </Suspense>
+          }
+        />
+      ))}
     </Routes>
   );
 }

@@ -1,10 +1,8 @@
-// App.jsx
-import React, { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
-import MapCard from './components/MapCard';
-import { MAPS } from './constants.js';
-import MapPageContent from './components/MapPageContent.jsx';
+import MapCard from "./components/MapCard";
+import { MAPS } from "./constants.js";
+import MapPageContent from "./components/MapPageContent.jsx";
 
 function App() {
   return (
@@ -18,7 +16,7 @@ function App() {
               {MAPS.map((map, index) => (
                 <MapCard
                   key={index}
-                  Text={map.Text}
+                  Name={map.Name}
                   Image={map.Image}
                   Link={map.Link}
                 />
@@ -32,9 +30,9 @@ function App() {
           key={index}
           path={map.Link}
           element={
-              <MapPageContent mapName={map.Text}>
-                <map.Component />
-              </MapPageContent>
+            <MapPageContent mapName={map.Name}>
+              <map.Component />
+            </MapPageContent>
           }
         />
       ))}

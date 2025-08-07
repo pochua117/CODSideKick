@@ -5,13 +5,13 @@ const TerminusPage = lazy(() => import('./maps/TerminusPage.jsx'));
 
 export const MAPS = [
   {
-    Text: 'Terminus',
+    Name: 'Terminus',
     Image: 'terminus.jpg',
     Link: '/maps/terminus',
     Component: TerminusPage
   },
   {
-    Text: 'Citadelle Des Morts',
+    Name: 'Citadelle Des Morts',
     Image: 'citadelle.jpg',
     Link: '/maps/citadelle',
     Component: CitadellePage

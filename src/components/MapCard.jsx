@@ -1,18 +1,20 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const MapCard = ({Text, Image = 'https://picsum.photos/id/10/200/300', Link: linkTo}) => {
-    const finalImage = `./images/${Image}`
+const MapCard = ({ Name, Image, Link: linkTo }) => {
+  const finalImage = `./images/${Image}`;
 
-    return (
-      <Link to={linkTo}>
-      <article className='card'>
-        <div className='card-image'>
+  return (
+    <Link to={linkTo}>
+      <article className="card">
+        <div className="card-image">
           <img src={finalImage} alt={Text} />
         </div>
-        <div translate="no" className='card-text'>{Text}</div>
+        <div translate="no" className="card-text">
+          {Name}
+        </div>
       </article>
-      </Link>
-    )
-  }
+    </Link>
+  );
+};
 
-export default MapCard
+export default MapCard;

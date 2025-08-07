@@ -1,30 +1,29 @@
-
 const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images, type }) => {
-    return (
+  return (
     <div
-       className="drop-slot"
-       onDragOver={allowDrop}
-       onDrop={(e) => {
-        const draggedId = parseInt(e.dataTransfer.getData("symbolId"))
+      className="drop-slot"
+      onDragOver={allowDrop}
+      onDrop={(e) => {
+        const draggedId = parseInt(e.dataTransfer.getData("symbolId"));
         if (!isNaN(draggedId)) {
-        onDrop(draggedId)
-      }
-       }}
-       onClick={(e) => {
-        onDrop(id)
-       }}
-     >
-       {symbolId !== null ? (
-         <img
-           className="simbol-selected-image"
-           src={`${images}signo_${symbolId}.${type}`}
-           alt={`Signo ${symbolId}`}
-         />
-       ) : (
-         <div className="empty-slot"></div>
-       )}
+          onDrop(draggedId);
+        }
+      }}
+      onClick={(e) => {
+        onDrop(id);
+      }}
+    >
+      {symbolId !== null ? (
+        <img
+          className="simbol-selected-image"
+          src={`${images}signo_${symbolId}.${type}`}
+          alt={`Signo ${symbolId}`}
+        />
+      ) : (
+        <div className="empty-slot"></div>
+      )}
     </div>
-    )
-}
+  );
+};
 
-export default SimbolSlot
+export default SimbolSlot;

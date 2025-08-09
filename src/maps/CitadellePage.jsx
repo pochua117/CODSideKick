@@ -1,7 +1,6 @@
 import { useState } from "react";
 import SymbolsPuzzle from "../components/SymbolsPuzzle";
 import PuzzleButton from "../components/PuzzleButton";
-import SymbolsGallery from "../components/SymbolsGallery";
 
 const CitadellePage = () => {
   const [activeTab, setActiveTab] = useState("puzzle1");
@@ -68,7 +67,7 @@ const CitadellePage = () => {
             name="Symbols"
             length={20}
             resultlenght={6}
-            imagesDir="../images/simbols/"
+            imagesDir="../images/symbols/"
             imageExtension="jpeg"
           />
         </div>
@@ -103,7 +102,7 @@ const CitadellePage = () => {
             activeTab === "puzzle4" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SymbolsGallery images="../images/raven/" type="jpeg" length={5} imagesInfo={imagesInfo} />
+          <SymbolsGallery imagesDir="../images/raven/" imageExtension="jpeg" length={5} imagesInfo={imagesInfo} />
         </div>
       </div>
     </div>

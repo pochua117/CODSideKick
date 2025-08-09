@@ -1,9 +1,37 @@
 import { useState } from "react";
 import SimbolsPuzzle from "../components/SimbolsPuzzle";
 import PuzzleButton from "../components/PuzzleButton";
+import SimbolsGallery from "../components/SimbolsGallery";
 
 const CitadellePage = () => {
   const [activeTab, setActiveTab] = useState("puzzle1");
+  const imagesInfo = [
+    {
+      name: "Horn",
+      zodiacImage: "/../images/zodiac/aries.svg",
+      elementImage: "/../images/elements/fire.svg"
+    },
+    {
+      name: "Jaw",
+      zodiacImage: "/../images/zodiac/leo.svg",
+      elementImage: "/../images/elements/fire.svg"
+    },
+    {
+      name: "Fish",
+      zodiacImage: "/../images/zodiac/pisces.svg",
+      elementImage: "/../images/elements/water.svg"
+    },
+    {
+      name: "Scorpion",
+      zodiacImage: "/../images/zodiac/scorpio.svg",
+      elementImage: "/../images/elements/water.svg"
+    },
+    {
+      name: "Raven",
+      zodiacImage: "/../images/zodiac/gemini.svg",
+      elementImage: "/../images/elements/air.svg"
+    },
+  ];
 
   return (
     <div className="container">
@@ -74,7 +102,9 @@ const CitadellePage = () => {
           className={
             activeTab === "puzzle4" ? "puzzle-visible" : "puzzle-hidden"
           }
-        ></div>
+        >
+          <SimbolsGallery images="../images/raven/" type="jpeg" length={5} imagesInfo={imagesInfo} />
+        </div>
       </div>
     </div>
   );

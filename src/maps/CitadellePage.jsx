@@ -68,7 +68,7 @@ const CitadellePage = () => {
             name="Symbols"
             length={20}
             resultlenght={6}
-            imagesDir="../images/symbols/"
+            imagesDir="../images/simbols/"
             imageExtension="jpeg"
           />
         </div>
@@ -103,7 +103,7 @@ const CitadellePage = () => {
             activeTab === "puzzle4" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SymbolsGallery imagesDir="../images/raven/" imageExtension="jpeg" length={5} imagesInfo={imagesInfo} />
+          <SymbolsGallery images="../images/raven/" type="jpeg" length={5} imagesInfo={imagesInfo} />
         </div>
       </div>
     </div>

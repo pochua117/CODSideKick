@@ -1,4 +1,4 @@
-const SymbolSlot = ({ dropSymbolId, clickSymbolId, onDrop, allowDrop, imagesDir, imageExtension }) => {
+const SimbolSlot = ({ dropSymbolId, clickSymbolId,onDrop, allowDrop, imagesDir, imageExtension }) => {
   return (
     <div
       className="drop-slot"
@@ -15,7 +15,7 @@ const SymbolSlot = ({ dropSymbolId, clickSymbolId, onDrop, allowDrop, imagesDir,
     >
       {dropSymbolId !== null ? (
         <img
-          className="symbol-selected-image"
+          className="simbol-selected-image"
           src={`${imagesDir}signo_${dropSymbolId}.${imageExtension}`}
           alt={`Signo ${dropSymbolId}`}
         />

@@ -19,6 +19,7 @@ export const MAPS = [
 ];
 
 export const imagesInfo = [
+  
   {
     name: "Horn",
     zodiacImage: "/../images/zodiac/aries.svg",

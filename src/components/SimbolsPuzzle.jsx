@@ -1,30 +1,17 @@
-import SimbolSlots from "../components/SimbolSlots";
 import { useState } from "react";
 
+import SimbolSlots from "../components/SimbolSlots";
+import SimbolsGallery from "../components/SimbolsGallery";
+
 const SimbolsPuzzle = ({ name, length, resultlenght, images, type }) => {
-  const simbols = Array.from({ length: length }, (_, i) => i);
   const [Id, setId] = useState(0);
 
-  const handleDragStart = (e, symbolId) => {
-    e.dataTransfer.setData("symbolId", symbolId);
-  };
+
 
   return (
     <div className="container">
       <h2 className="simbols-title">{name}</h2>
-      <section className="simbols-section">
-        {simbols.map((i) => (
-          <img
-            key={i}
-            className="simbol-image"
-            src={`${images}signo_${i}.${type}`}
-            alt={`Signo ${i}`}
-            draggable
-            onDragStart={(e) => handleDragStart(e, i)}
-            onClick={() => setId(i)}
-          />
-        ))}
-      </section>
+      <SimbolsGallery setId={setId} images={images} type={type} length={length} />
       <SimbolSlots id={Id} images={images} length={resultlenght} type={type} />
     </div>
   );

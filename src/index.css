@@ -222,16 +222,10 @@ body {
   width: 90px;
   height: 90px;
   object-fit: contain;
-  border: 2px solid #888;
   border-radius: 8px;
   cursor: grab;
   transition: transform 0.2s, border-color 0.2s;
   background-color: #504d4a;
-}
-
-.simbol-image:hover {
-  transform: scale(1.1);
-  border-color: #6666ff;
 }
 
 .section-selected {
@@ -327,6 +321,33 @@ body {
   animation: fadeIn 0.3s ease-in-out;
 }
 
+.simbol-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: contain;
+  border: solid #888;
+  border-radius: 8px;
+  transition: transform 0.2s, border-color 0.2s;
+  background-color: #504d4a;
+}
+
+.simbol-container:hover {
+  transform: scale(1.1);
+  border-color: #6666ff;
+}
+
+.simbol-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.simbol-extra {
+  width: 20px;
+  height: 20px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -411,14 +432,14 @@ body {
   }
 
   .simbols-section {
-    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
     gap: 8px;
     padding: 12px;
   }
 
   .simbol-image {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 
   .section-selected {
@@ -427,8 +448,14 @@ body {
   }
 
   .drop-slot {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .simbol-name {
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
   }
 }
 
@@ -505,14 +532,14 @@ body {
   }
 
   .simbols-section {
-    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
     gap: 12px;
     padding: 12px;
   }
 
   .simbol-image {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 
   .section-selected {
@@ -521,8 +548,8 @@ body {
   }
 
   .drop-slot {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 }
 

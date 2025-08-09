@@ -629,7 +629,7 @@ body {
 
   .simbols-section {
     grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-    gap: 12px;
+    gap: 13px;
     padding: 12px;
   }
 

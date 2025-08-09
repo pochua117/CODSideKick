@@ -1,14 +1,14 @@
-import SimbolSlot from "./SimbolSlot";
+import SymbolSlot from "./SymbolSlot";
 import { handleDrop, allowDrop } from "../utils/Citadelle/utils";
 import { selectedStates } from "../utils/Citadelle/utils";
 
-const SimbolSlots = ({ clickSymbolId, imagesDir, length, imageExtension }) => {
+const SymbolSlots = ({ clickSymbolId, imagesDir, length, imageExtension }) => {
   const { selected, setSelected } = selectedStates(length);
 
   return (
     <section className="section-selected">
       {selected.map((dropSymbolId, index) => (
-        <SimbolSlot
+        <SymbolSlot
           key={index}
           dropSymbolId={dropSymbolId}
           clickSymbolId={clickSymbolId}
@@ -24,4 +24,4 @@ const SimbolSlots = ({ clickSymbolId, imagesDir, length, imageExtension }) => {
   );
 };
 
-export default SimbolSlots;
+export default SymbolSlots;

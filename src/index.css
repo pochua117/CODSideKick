@@ -206,7 +206,7 @@ body {
   margin: auto;
 }
 
-.simbols-section {
+.symbols-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 12px;
@@ -218,7 +218,7 @@ body {
   justify-items: center;
 }
 
-.simbol-image {
+.symbol-image {
   width: 90px;
   height: 90px;
   object-fit: contain;
@@ -254,7 +254,7 @@ body {
   border-color: #6666ff;
 }
 
-.simbol-selected-image {
+.symbol-selected-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -268,7 +268,7 @@ body {
   border-radius: 6px;
 }
 
-.simbols-title {
+.symbols-title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -321,7 +321,7 @@ body {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.simbol-container {
+.symbol-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,18 +332,18 @@ body {
   background-color: #504d4a;
 }
 
-.simbol-container:hover {
+.symbol-container:hover {
   transform: scale(1.1);
   border-color: #6666ff;
 }
 
-.simbol-name {
+.symbol-name {
   font-size: 20px;
   font-weight: bold;
   color: white;
 }
 
-.simbol-extra {
+.symbol-extra {
   width: 20px;
   height: 20px;
 }
@@ -427,17 +427,17 @@ body {
     padding: 10px;
   }
 
-  .simbols-title {
+  .symbols-title {
     font-size: 25px;
   }
 
-  .simbols-section {
+  .symbols-section {
     grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
     gap: 8px;
     padding: 12px;
   }
 
-  .simbol-image {
+  .symbol-image {
     width: 45px;
     height: 45px;
   }
@@ -452,7 +452,7 @@ body {
     height: 45px;
   }
 
-  .simbol-name {
+  .symbol-name {
     font-size: 10px;
     font-weight: bold;
     color: white;
@@ -527,17 +527,17 @@ body {
     padding: 10px;
   }
 
-  .simbols-title {
+  .symbols-title {
     font-size: 20px;
   }
 
-  .simbols-section {
+  .symbols-section {
     grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
     gap: 12px;
     padding: 12px;
   }
 
-  .simbol-image {
+  .symbol-image {
     width: 40px;
     height: 40px;
   }
@@ -586,16 +586,16 @@ body {
     font-size: 12px;
   }
 
-  .simbols-title {
+  .symbols-title {
     font-size: 22px;
   }
 
-  .simbols-section {
+  .symbols-section {
     grid-template-columns: repeat(10, 1fr);
     padding: 10px;
   }
 
-  .simbol-image {
+  .symbol-image {
     width: 36px;
     height: 36px;
   }
@@ -627,7 +627,7 @@ body {
     font-size: 15px;
   }
 
-  .simbols-section {
+  .symbols-section {
     grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     gap: 13px;
     padding: 12px;

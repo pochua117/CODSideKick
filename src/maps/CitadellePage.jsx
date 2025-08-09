@@ -1,7 +1,7 @@
 import { useState } from "react";
-import SimbolsPuzzle from "../components/SimbolsPuzzle";
+import SymbolsPuzzle from "../components/SymbolsPuzzle";
 import PuzzleButton from "../components/PuzzleButton";
-import SimbolsGallery from "../components/SimbolsGallery";
+import SymbolsGallery from "../components/SymbolsGallery";
 
 const CitadellePage = () => {
   const [activeTab, setActiveTab] = useState("puzzle1");
@@ -37,7 +37,7 @@ const CitadellePage = () => {
     <div className="container">
       <div className="tab-buttons">
         <PuzzleButton
-          name="Simbols"
+          name="Symbols"
           puzzle={1}
           states={[activeTab, setActiveTab]}
         />
@@ -64,11 +64,11 @@ const CitadellePage = () => {
             activeTab === "puzzle1" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SimbolsPuzzle
-            name="Simbols"
+          <SymbolsPuzzle
+            name="Symbols"
             length={20}
             resultlenght={6}
-            imagesDir="../images/simbols/"
+            imagesDir="../images/symbols/"
             imageExtension="jpeg"
           />
         </div>
@@ -77,7 +77,7 @@ const CitadellePage = () => {
             activeTab === "puzzle2" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SimbolsPuzzle
+          <SymbolsPuzzle
             name="Traps"
             length={4}
             resultlenght={4}
@@ -90,7 +90,7 @@ const CitadellePage = () => {
             activeTab === "puzzle3" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SimbolsPuzzle
+          <SymbolsPuzzle
             name="Swords"
             length={4}
             resultlenght={4}
@@ -103,7 +103,7 @@ const CitadellePage = () => {
             activeTab === "puzzle4" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SimbolsGallery imagesDir="../images/raven/" imageExtension="jpeg" length={5} imagesInfo={imagesInfo} />
+          <SymbolsGallery imagesDir="../images/raven/" imageExtension="jpeg" length={5} imagesInfo={imagesInfo} />
         </div>
       </div>
     </div>

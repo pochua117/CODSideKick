@@ -2,10 +2,36 @@ import { useState } from "react";
 import SymbolsPuzzle from "../components/SymbolsPuzzle";
 import PuzzleButton from "../components/PuzzleButton";
 import SymbolsGallery from "../components/SymbolsGallery";
-import { imagesInfo } from "../constants";
 
 const CitadellePage = () => {
   const [activeTab, setActiveTab] = useState("puzzle1");
+  const imagesInfo = [
+    {
+      name: "Horn",
+      zodiacImage: "/../images/zodiac/aries.svg",
+      elementImage: "/../images/elements/fire.svg"
+    },
+    {
+      name: "Jaw",
+      zodiacImage: "/../images/zodiac/leo.svg",
+      elementImage: "/../images/elements/fire.svg"
+    },
+    {
+      name: "Fish",
+      zodiacImage: "/../images/zodiac/pisces.svg",
+      elementImage: "/../images/elements/water.svg"
+    },
+    {
+      name: "Scorpion",
+      zodiacImage: "/../images/zodiac/scorpio.svg",
+      elementImage: "/../images/elements/water.svg"
+    },
+    {
+      name: "Raven",
+      zodiacImage: "/../images/zodiac/gemini.svg",
+      elementImage: "/../images/elements/air.svg"
+    },
+  ];
 
   return (
     <div className="container">

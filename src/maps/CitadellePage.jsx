@@ -68,8 +68,8 @@ const CitadellePage = () => {
             name="Simbols"
             length={20}
             resultlenght={6}
-            images="../images/simbols/"
-            type="jpeg"
+            imagesDir="../images/simbols/"
+            imageExtension="jpeg"
           />
         </div>
         <div
@@ -81,8 +81,8 @@ const CitadellePage = () => {
             name="Traps"
             length={4}
             resultlenght={4}
-            images="../images/traps/"
-            type="svg"
+            imagesDir="../images/traps/"
+            imageExtension="svg"
           />
         </div>
         <div
@@ -94,8 +94,8 @@ const CitadellePage = () => {
             name="Swords"
             length={4}
             resultlenght={4}
-            images="../images/animals/"
-            type="svg"
+            imagesDir="../images/animals/"
+            imageExtension="svg"
           />
         </div>
         <div
@@ -103,7 +103,7 @@ const CitadellePage = () => {
             activeTab === "puzzle4" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SimbolsGallery images="../images/raven/" type="jpeg" length={5} imagesInfo={imagesInfo} />
+          <SimbolsGallery imagesDir="../images/raven/" imageExtension="jpeg" length={5} imagesInfo={imagesInfo} />
         </div>
       </div>
     </div>

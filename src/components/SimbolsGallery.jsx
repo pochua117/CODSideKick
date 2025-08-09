@@ -1,4 +1,4 @@
-const SimbolsGallery = ({ setId, images, type, length, imagesInfo }) => {
+const SimbolsGallery = ({ setClickSymbolId, imagesDir, imageExtension, length, imagesInfo }) => {
   const simbols = Array.from({ length: length }, (_, i) => i);
 
   const handleDragStart = (e, symbolId) => {
@@ -13,11 +13,11 @@ const SimbolsGallery = ({ setId, images, type, length, imagesInfo }) => {
           <div className="simbol-container">
           <img
             className="simbol-image"
-            src={`${images}signo_${i}.${type}`}
+            src={`${imagesDir}signo_${i}.${imageExtension}`}
             alt={`Signo ${i}`}
             draggable
             onDragStart={(e) => handleDragStart(e, i)}
-            onClick={() => setId(i)}
+            onClick={() => setClickSymbolId(i)}
           />          
           {imagesInfo && imagesInfo[i]?.zodiacImage && <img className="simbol-extra" src={imagesInfo[i].zodiacImage} />}
           {imagesInfo && imagesInfo[i]?.elementImage && <img className="simbol-extra" src={imagesInfo[i].elementImage} />}

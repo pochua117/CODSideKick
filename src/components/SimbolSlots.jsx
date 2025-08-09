@@ -2,22 +2,22 @@ import SimbolSlot from "./SimbolSlot";
 import { handleDrop, allowDrop } from "../utils/Citadelle/utils";
 import { selectedStates } from "../utils/Citadelle/utils";
 
-const SimbolSlots = ({ id, images, length, type }) => {
+const SimbolSlots = ({ clickSymbolId, imagesDir, length, imageExtension }) => {
   const { selected, setSelected } = selectedStates(length);
 
   return (
     <section className="section-selected">
-      {selected.map((symbolId, index) => (
+      {selected.map((dropSymbolId, index) => (
         <SimbolSlot
           key={index}
-          symbolId={symbolId}
-          onDrop={(symbolId) =>
-            handleDrop(index, symbolId, selected, setSelected)
+          dropSymbolId={dropSymbolId}
+          clickSymbolId={clickSymbolId}
+          onDrop={(dropSymbolId) =>
+            handleDrop(index, dropSymbolId, selected, setSelected)
           }
           allowDrop={allowDrop}
-          id={id}
-          images={images}
-          type={type}
+          imagesDir={imagesDir}
+          imageExtension={imageExtension}
         />
       ))}
     </section>

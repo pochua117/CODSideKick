@@ -48,7 +48,7 @@ const ReckoningPage = () => {
             />
           ))}
         </div>
-        <p>{numerosOrdenados.join(", ")}</p>
+        <p className="result">{`Code: ${numerosOrdenados.join("")}`}</p> 
       </div>
     </section>
   );

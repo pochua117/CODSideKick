@@ -348,6 +348,14 @@ body {
   height: 20px;
 }
 
+.reckoning-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  text-align: center;
+  margin: auto;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -16,7 +16,7 @@
   </url>
 
   <url>
-    <loch>https://codsk.vercel.app/maps/terminus</loc>
+    <loc>https://codsk.vercel.app/maps/terminus</loc>
     <lastmod>2025-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

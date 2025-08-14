@@ -377,16 +377,17 @@ body {
   text-align: left;
   gap: .30rem;
   padding: 13px 5px;
-  border: 2px solid #666;
+  border: 2px solid #888;
   background-color: #504d4a;
   color: white;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .objects-section button .oject-name {
-  font-weight: 999;
+  font-weight: 888;
 }
 
 .objects-section button .oject-extra {

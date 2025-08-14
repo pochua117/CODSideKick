@@ -1,4 +1,4 @@
-const SymbolsGallery = ({ setClickSymbolId, imagesDir, imageExtension, length, imagesInfo }) => {
+const SymbolsGallery = ({ setClickSymbolId=()=>{}, imagesDir, imageExtension, length, imagesInfo }) => {
   const symbols = Array.from({ length: length }, (_, i) => i);
 
   const handleDragStart = (e, symbolId) => {

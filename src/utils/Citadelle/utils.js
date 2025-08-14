@@ -19,9 +19,9 @@ export function useNumbers() {
   }
 }
 
-export function selectedStates(length) {
-  const [selected, setSelected] = useState(Array(length).fill(null)) // 6 espacios vacíos
-  return {selected, setSelected}
+export function useSelectedStates(length) {
+  const [selected, setSelected] = useState(Array(length).fill(null));
+  return { selected, setSelected };
 }
 
 export const handleDrop = (index, symbolId, selected, setSelected) => {

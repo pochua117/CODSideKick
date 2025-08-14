@@ -1,4 +1,4 @@
-import FolderPuzzleSolver from "../components/FolderPuzzleSolver.jsx";
+import FolderPuzzleSolver from "../FolderPuzzleSolver.jsx";
 
 const ReckoningPage = () => {
 

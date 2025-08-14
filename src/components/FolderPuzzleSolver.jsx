@@ -1,55 +1,74 @@
 import { useState } from "react";
-import InputBox from "../components/InputBox.jsx";
 
 const FolderPuzzleSolver = () => {
-  const [items, setItems] = useState(
-    Array.from({ length: 4 }, (_, i) => ({
-      number: i + 1,
-      month: "",
-    }))
-  );
+  // Lista fija de 6 botones (número y mes cualquiera)
+  const allButtons = [
+    { object: "Notso's Collar", number: 1, month: "1985-07-15" },
+    { object: "Katana", number: 2, month: "1985-12-06" },
+    { object: "Scarf",number: 3, month: "1985-08-06" },
+    { object: "Wristwatch", number: 4, month: "1985-09-02" },
+    { object: "Combat Goggles",number: 5, month: "1985-10-12" },
+    { object: "BND Badge",number: 6, month: "1985-06-28" },
+  ];
 
-  const handleChange = (index, field, value) => {
-    setItems((prev) =>
-      prev.map((item, i) => (i === index ? { ...item, [field]: value } : item))
-    );
+  const [selected, setSelected] = useState([]);
+
+  const toggleSelect = (btn) => {
+    setSelected((prev) => {
+      const exists = prev.find((item) => item.number === btn.number);
+
+      if (exists) {
+        // Si ya está, lo quitamos
+        return prev.filter((item) => item.number !== btn.number);
+      } else {
+        // Si no está y hay menos de 4, lo agregamos
+        if (prev.length < 4) {
+          return [...prev, btn];
+        }
+        return prev; // Ignora si ya hay 4
+      }
+    });
   };
 
-  const sortedItems = [...items].sort((a, b) => {
-    if (!a.month) return 1;
-    if (!b.month) return -1;
-    console.log(a, b);
-    return a.month - b.month;
+  // Ordenar seleccionados por mes (más antiguo primero)
+  const sortedSelected = [...selected].sort((a, b) => {
+    return new Date(a.month) - new Date(b.month);
   });
 
-  const numerosOrdenados = sortedItems.map((item) => item.number);
+  const code = sortedSelected.map((item) => item.number).join("");
 
   return (
     <section className="reckoning-container">
       <h2 className="symbols-title">Folder Puzzle Solver</h2>
-      <div className="section-numbers">
-        <h2>Object numbers</h2>
-        <div className="input-group">
-          {items.map((item, index) => (
-            <InputBox
-              key={index}
-              value={item.number}
-              setFunction={(val) => handleChange(index, "number", Number(val))}
-            />
-          ))}
-        </div>
-        <h2>Object months</h2>
-        <div className="input-group">
-          {items.map((item, index) => (
-            <InputBox
-              key={index}
-              value={item.month}
-              setFunction={(val) => handleChange(index, "month", Number(val))}
-            />
-          ))}
-        </div>
-        <p className="result">{`Code: ${numerosOrdenados.join("")}`}</p>
+
+      <p className="result">
+          {`Selected ${selected.length}/4`}
+      </p>
+      <div className="objects-section">
+        {allButtons.map((btn) => {
+          const isSelected = selected.some(
+            (item) => item.number === btn.number
+          );
+          return (
+            <button
+              key={btn.number}
+              onClick={() => toggleSelect(btn)}
+              style={{
+                backgroundColor: isSelected ? "#8a8a8aff" : "#504d4a",
+              }}
+            >
+              <span className="oject-name">{btn.object}</span>
+              <span className="object-extra">{btn.number} - {btn.month}</span>
+            </button>
+          );
+        })}
       </div>
+      <p className="result">
+        Code:
+        {selected.length === 4
+          ? ` ${code}`
+          : " - - - -"}
+      </p>
     </section>
   );
 };

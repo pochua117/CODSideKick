@@ -1,8 +1,8 @@
 import { lazy } from 'react';
-import ReckoningPage from './maps/ReckoningPage.jsx';
 
 const CitadellePage = lazy(() => import('./maps/CitadellePage.jsx'));
 const TerminusPage = lazy(() => import('./maps/TerminusPage.jsx'));
+const ReckoningPage = lazy(() => import('./maps/ReckoningPage.jsx'));
 
 export const MAPS = [
   {

@@ -41,6 +41,9 @@ const FolderPuzzleSolver = () => {
     <section className="reckoning-container">
       <h2 className="symbols-title">Folder Puzzle Solver</h2>
 
+      <p className="result">
+          {`Selected ${selected.length}/4`}
+      </p>
       <div className="objects-section">
         {allButtons.map((btn) => {
           const isSelected = selected.some(
@@ -60,11 +63,11 @@ const FolderPuzzleSolver = () => {
           );
         })}
       </div>
-
       <p className="result">
+        Code:
         {selected.length === 4
-          ? `Code: ${code}`
-          : `Select ${4 - selected.length} more objects`}
+          ? ` ${code}`
+          : " - - - -"}
       </p>
     </section>
   );

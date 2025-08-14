@@ -197,6 +197,7 @@ body {
   border-radius: 8px;
   margin-bottom: 10px;
   font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -355,6 +356,43 @@ body {
   text-align: center;
   margin: auto;
 }
+
+.objects-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  justify-items: center;
+}
+
+.objects-section button{
+  font-size: 15px;
+  display: grid;
+  align-items: center;
+  width: 150px;
+  text-align: left;
+  gap: .30rem;
+  padding: 13px 5px;
+  border: 2px solid #666;
+  background-color: #504d4a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.objects-section button .oject-name {
+  font-weight: 999;
+}
+
+.objects-section button .oject-extra {
+  font-size: .9rem;
+}
+
 
 @keyframes fadeIn {
   from {

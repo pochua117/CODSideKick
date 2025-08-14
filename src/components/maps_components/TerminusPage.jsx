@@ -1,5 +1,5 @@
-import { useNumbers } from "../utils/Citadelle/utils.js";
-import InputBox from "../components/InputBox.jsx";
+import { useNumbers } from "../../utils/Citadelle/utils.js";
+import InputBox from "../InputBox.jsx";
 
 const TerminusPage = () => {
   const { X, setX, Y, setY, Z, setZ, resultado1, resultado2, resultado3 } =

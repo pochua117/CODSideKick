@@ -1,4 +1,4 @@
-const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images, type }) => {
+const SymbolSlot = ({ dropSymbolId, clickSymbolId, onDrop, allowDrop, imagesDir, imageExtension }) => {
   return (
     <div
       className="drop-slot"
@@ -10,14 +10,14 @@ const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images, type }) => {
         }
       }}
       onClick={(e) => {
-        onDrop(id);
+        onDrop(clickSymbolId);
       }}
     >
-      {symbolId !== null ? (
+      {dropSymbolId !== null ? (
         <img
-          className="simbol-selected-image"
-          src={`${images}signo_${symbolId}.${type}`}
-          alt={`Signo ${symbolId}`}
+          className="symbol-selected-image"
+          src={`${imagesDir}signo_${dropSymbolId}.${imageExtension}`}
+          alt={`Signo ${dropSymbolId}`}
         />
       ) : (
         <div className="empty-slot"></div>
@@ -26,4 +26,4 @@ const SimbolSlot = ({ symbolId, onDrop, allowDrop, id, images, type }) => {
   );
 };
 
-export default SimbolSlot;
+export default SymbolSlot;

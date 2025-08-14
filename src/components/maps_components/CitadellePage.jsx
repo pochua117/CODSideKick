@@ -1,7 +1,7 @@
 import { useState } from "react";
-import SymbolsPuzzle from "../components/SymbolsPuzzle";
-import PuzzleButton from "../components/PuzzleButton";
-import SymbolsGallery from "../components/SymbolsGallery";
+import SymbolsPuzzle from "../SymbolsPuzzle";
+import PuzzleButton from "../PuzzleButton";
+import SymbolsGallery from "../SymbolsGallery";
 
 const CitadellePage = () => {
   const [activeTab, setActiveTab] = useState("puzzle1");

@@ -1,9 +1,9 @@
 import SymbolSlot from "./SymbolSlot";
 import { handleDrop, allowDrop } from "../utils/Citadelle/utils";
-import { selectedStates } from "../utils/Citadelle/utils";
+import { useSelectedStates } from "../utils/Citadelle/utils";
 
 const SymbolSlots = ({ clickSymbolId, imagesDir, length, imageExtension }) => {
-  const { selected, setSelected } = selectedStates(length);
+  const { selected, setSelected } = useSelectedStates(length);
 
   return (
     <section className="section-selected">

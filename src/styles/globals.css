@@ -508,6 +508,55 @@ body {
     font-weight: bold;
     color: white;
   }
+
+.reckoning-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  text-align: center;
+  margin: auto;
+}
+
+.objects-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  justify-items: center;
+}
+
+.objects-section button{
+  font-size: 10px;
+  display: grid;
+  align-items: center;
+  width: 90px;
+  text-align: left;
+  gap: .30rem;
+  padding: 13px 5px;
+  border: 2px solid #888;
+  background-color: #504d4a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.objects-section button:hover {
+  border-color: #3a3a3a;
+}
+
+.objects-section button .oject-name {
+  font-weight: 888;
+}
+
+.objects-section button .oject-extra {
+  font-size: .9rem;
+}
 }
 
 
@@ -602,6 +651,24 @@ body {
     width: 40px;
     height: 40px;
   }
+
+  .symbols-title {
+    font-size: 30px;
+  }
+
+  .objects-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 17px;
+  }
+
+  .objects-section button{
+    font-size: 10px;
+    width: 150px;
+    gap: .35rem;
+    padding: 5px 5px;
+  }
 }
 
 @media (max-width: 950px) and (orientation: landscape) {
@@ -670,6 +737,24 @@ body {
   .result {
     font-size: 16px;
   }
+
+    .symbols-title {
+    font-size: 30px;
+  }
+
+  .objects-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 17px;
+  }
+
+  .objects-section button{
+    font-size: 10px;
+    width: 150px;
+    gap: .35rem;
+    padding: 5px 5px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -687,4 +772,26 @@ body {
   .section-selected {
     gap: 6px;
   }
+
+  .reckoning-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  text-align: center;
+  margin: auto;
+}
+
+.objects-section {
+  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  gap: 5px;
+  margin-bottom: 40px;
+  padding: 7px;
+}
+
+.objects-section button{
+  font-size: 10px;
+  width: 90px;
+  gap: .35rem;
+  padding: 5px 5px;
+}
 }

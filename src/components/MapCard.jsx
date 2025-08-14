@@ -7,7 +7,7 @@ const MapCard = ({ Name, Image, Link: linkTo }) => {
     <Link to={linkTo}>
       <article className="card">
         <div className="card-image">
-          <img src={finalImage} alt={Text} />
+          <img src={finalImage} alt={Name} />
         </div>
         <div translate="no" className="card-text">
           {Name}

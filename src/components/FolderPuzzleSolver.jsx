@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const FolderPuzzleSolver = () => {
-  // Lista fija de 6 botones (número y mes cualquiera)
   const allButtons = [
     { object: "Notso's Collar", number: 1, month: "1985-07-15" },
     { object: "Katana", number: 2, month: "1985-12-06" },
@@ -18,19 +17,20 @@ const FolderPuzzleSolver = () => {
       const exists = prev.find((item) => item.number === btn.number);
 
       if (exists) {
-        // Si ya está, lo quitamos
+        // If it's already there, we remove it.
         return prev.filter((item) => item.number !== btn.number);
       } else {
-        // Si no está y hay menos de 4, lo agregamos
+        // If it is not there and there are less than 4, we add it
         if (prev.length < 4) {
           return [...prev, btn];
         }
-        return prev; // Ignora si ya hay 4
+        return prev; // Ignore if there are already 4
       }
     });
   };
 
-  // Ordenar seleccionados por mes (más antiguo primero)
+  // Sort selected by month (oldest first)
+
   const sortedSelected = [...selected].sort((a, b) => {
     return new Date(a.month) - new Date(b.month);
   });

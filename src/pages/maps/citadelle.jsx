@@ -13,7 +13,7 @@ export default function Citadelle() {
           content="Solve Citadelle des Morts puzzles with puzzle solvers."
         />
       </Head>
-      <MapPageContent mapName="Citadelle">
+      <MapPageContent mapName="Citadelle des Morts">
         <CitadellePage />
       </MapPageContent>
     </>

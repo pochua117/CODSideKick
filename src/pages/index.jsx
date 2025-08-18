@@ -9,7 +9,7 @@ export default function Home() {
         <title>Call Of Duty SideKick</title>
         <meta
           name="description"
-          content="Solve Call of Duty B lack Ops 6 Zombies puzzles with puzzle solvers"
+          content="Solve Call of Duty Black Ops 6 Zombies puzzles with puzzle solvers"
         />
       </Head>
 

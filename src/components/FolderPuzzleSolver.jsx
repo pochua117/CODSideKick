@@ -1,35 +1,78 @@
 import { useState } from "react";
 
+import ItemSelection from "./ItemSelection.jsx";
+
 const FolderPuzzleSolver = () => {
   const allButtons = [
-    { object: "Notso's Collar", number: 1, month: "1985-07-15" },
-    { object: "Katana", number: 2, month: "1985-12-06" },
-    { object: "Scarf", number: 3, month: "1985-08-06" },
-    { object: "Wristwatch", number: 4, month: "1985-09-02" },
-    { object: "Combat Goggles", number: 5, month: "1985-10-12" },
-    { object: "BND Badge", number: 6, month: "1985-06-28" },
-  ];
+  {
+    object: "Notso's Collar",
+    number: 1,
+    month: "1985-07-15",
+    content: (
+      <>
+        <span className="object-name">Notso's Collar</span>
+        <span className="object-extra">1 - 1985-07-15</span>
+      </>
+    ),
+  },
+  {
+    object: "Katana",
+    number: 2,
+    month: "1985-12-06",
+    content: (
+      <>
+        <span className="object-name">Katana</span>
+        <span className="object-extra">2 - 1985-12-06</span>
+      </>
+    ),
+  },
+  {
+    object: "Scarf",
+    number: 3,
+    month: "1985-08-06",
+    content: (
+      <>
+        <span className="object-name">Scarf</span>
+        <span className="object-extra">3 - 1985-08-06</span>
+      </>
+    ),
+  },
+  {
+    object: "Wristwatch",
+    number: 4,
+    month: "1985-09-02",
+    content: (
+      <>
+        <span className="object-name">Wristwatch</span>
+        <span className="object-extra">4 - 1985-09-02</span>
+      </>
+    ),
+  },
+  {
+    object: "Combat Goggles",
+    number: 5,
+    month: "1985-10-12",
+    content: (
+      <>
+        <span className="object-name">Combat Goggles</span>
+        <span className="object-extra">5 - 1985-10-12</span>
+      </>
+    ),
+  },
+  {
+    object: "BND Badge",
+    number: 6,
+    month: "1985-06-28",
+    content: (
+      <>
+        <span className="object-name">BND Badge</span>
+        <span className="object-extra">6 - 1985-06-28</span>
+      </>
+    ),
+  },
+];
 
   const [selected, setSelected] = useState([]);
-
-  const toggleSelect = (btn) => {
-    setSelected((prev) => {
-      const exists = prev.find((item) => item.number === btn.number);
-
-      if (exists) {
-        // If it's already there, we remove it.
-        return prev.filter((item) => item.number !== btn.number);
-      } else {
-        // If it is not there and there are less than 4, we add it
-        if (prev.length < 4) {
-          return [...prev, btn];
-        }
-        return prev; // Ignore if there are already 4
-      }
-    });
-  };
-  
-  // Sort selected by month (oldest first)
 
   const sortedSelected = [...selected].sort(
     (a, b) => new Date(a.month) - new Date(b.month)
@@ -42,43 +85,10 @@ const FolderPuzzleSolver = () => {
       <h2 className="symbols-title">Folder Puzzle Solver</h2>
 
       <p className="result">{`Selected ${selected.length}/4`}</p>
-
+    
       <div className="objects-section">
-        {allButtons.map((btn) => {
-          const isSelected = selected.some(
-            (item) => item.number === btn.number
-          );
-          const maxSelected = selected.length === 4;
-
-          let bgColor;
-          if (isSelected) {
-            bgColor = "#8a8a8a"; // Color si está seleccionado
-          } else if (maxSelected) {
-            bgColor = "#2e2e2e"; // Color de bloqueo si ya hay 4
-          } else {
-            bgColor = "#504d4a"; // Color normal
-          }
-
-          return (
-            <button
-              key={btn.number}
-              onClick={() => toggleSelect(btn)}
-              style={{
-                backgroundColor: bgColor,
-                cursor: maxSelected && !isSelected ? "not-allowed" : "pointer",
-                opacity: maxSelected && !isSelected ? 0.6 : 1,
-                transition: "0.2s",
-              }}
-            >
-              <span className="object-name">{btn.object}</span>
-              <span className="object-extra">
-                {btn.number} - {btn.month}
-              </span>
-            </button>
-          );
-        })}
+        <ItemSelection allButtons={allButtons} selected={selected} setSelected={setSelected} maxLength={4}/> 
       </div>
-
       <p className="result">
         Code: {selected.length === 4 ? ` ${code}` : " - - - -"}
       </p>

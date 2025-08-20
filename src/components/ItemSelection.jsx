@@ -1,6 +1,6 @@
 
 
-const ItemSelection = ({ allButtons, selected = [], setSelected = function () {} }) => {  
+const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}, maxLength }) => {  
 
   const toggleSelect = (btn) => {
     setSelected((prev) => {
@@ -8,15 +8,12 @@ const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}
 
       if (exists) {
         // If it's already there, we remove it.
-        console.log(prev);
         return prev.filter((item) => item.number !== btn.number);
       } else {
         // If it is not there and there are less than 4, we add it
-        if (prev.length < 4) {
-          console.log(prev);
+        if (prev.length < maxLength) {
           return [...prev, btn];
         }
-        console.log(prev);
         return prev; // Ignore if there are already 4
       }
     });
@@ -24,12 +21,11 @@ const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}
 
   return (
     <>
-      <div className="objects-section">
         {allButtons.map((btn) => {
           const isSelected = selected.some(
             (item) => item.number === btn.number
           );
-          const maxSelected = selected.length === 4;
+          const maxSelected = selected.length === maxLength;
 
           let bgColor;
           if (isSelected) {
@@ -55,7 +51,6 @@ const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}
             </button>
           );
         })}
-      </div>
     </>
   );
 };

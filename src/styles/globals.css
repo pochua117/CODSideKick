@@ -394,11 +394,44 @@ body {
   font-size: .9rem;
 }
 
-.item-selection {
+.terminus-objects-section {
   display: flex;
   flex-direction: column;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.item-selection {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 12px;
+  padding: 6px;
+}
+
+.item-selection button img{
+  width: 50px;
+  height: 50px;
+}
+
+.item-selection button {
+  border-radius: 6px;
+}
+
+.result-box {
+  display: inline-block;
+  min-width: 20px;   
+  margin: 0 5px;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 255, 255); 
+}
+
+.result-box {
+  display: inline-block;
+  min-width: 25px;   
+  margin: 0 5px;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 255, 255); 
 }
 
 
@@ -549,6 +582,10 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+.objects-section button:hover {
+  border-color: #3a3a3a;
+}
+
 .objects-section button .oject-name {
   font-weight: 888;
 }
@@ -556,6 +593,13 @@ body {
 .objects-section button .oject-extra {
   font-size: .9rem;
 }
+
+.item-selection button img{
+  width: 40px;
+  height: 40px;
+}
+
+
 }
 
 
@@ -667,6 +711,11 @@ body {
     width: 150px;
     gap: .35rem;
     padding: 5px 5px;
+  }
+
+  .item-selection button img{
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -792,5 +841,15 @@ body {
   width: 90px;
   gap: .35rem;
   padding: 5px 5px;
+}
+
+.item-selection {
+  gap: 5px;
+  padding: 2.5px;
+}
+
+.item-selection button img{
+  width: 25px;
+  height: 25px;
 }
 }

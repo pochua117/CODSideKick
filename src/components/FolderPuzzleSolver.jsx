@@ -85,9 +85,10 @@ const FolderPuzzleSolver = () => {
       <h2 className="symbols-title">Folder Puzzle Solver</h2>
 
       <p className="result">{`Selected ${selected.length}/4`}</p>
-
-      <ItemSelection allButtons={allButtons} selected={selected} setSelected={setSelected} /> 
-
+  
+      <div className="objects-section">
+        <ItemSelection allButtons={allButtons} selected={selected} setSelected={setSelected} /> 
+      </div>
       <p className="result">
         Code: {selected.length === 4 ? ` ${code}` : " - - - -"}
       </p>

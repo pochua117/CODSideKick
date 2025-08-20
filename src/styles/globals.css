@@ -419,6 +419,22 @@ body {
   border-radius: 6px;
 }
 
+.result-box {
+  display: inline-block;
+  min-width: 20px;   
+  margin: 0 5px;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 255, 255); 
+}
+
+.result-box {
+  display: inline-block;
+  min-width: 25px;   
+  margin: 0 5px;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 255, 255); 
+}
+
 
 @keyframes fadeIn {
   from {
@@ -583,6 +599,8 @@ body {
   width: 40px;
   height: 40px;
 }
+
+
 }
 
 

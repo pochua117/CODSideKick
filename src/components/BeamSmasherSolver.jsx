@@ -79,8 +79,13 @@ const BeamSmahserSolver = () => {
         ))}
       </div>
 
-      <div className="result" >
-        Result: {[resultado1, resultado2, resultado3].join("  ")}
+      <div className="result">
+        Code: 
+        {[resultado1, resultado2, resultado3].map((res, idx) => (
+          <span key={idx} className="result-box">
+            {res ? res : <span style={{ visibility: "hidden" }}>0</span>}
+          </span>
+        ))}
       </div>
     </section>
   );

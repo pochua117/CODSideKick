@@ -323,6 +323,7 @@ body {
 }
 
 .symbol-container {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -345,8 +346,8 @@ body {
 }
 
 .symbol-extra {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .reckoning-container {
@@ -528,6 +529,10 @@ body {
     color: white;
   }
 
+  .symbol-extra {
+  width: 20px;
+  height: 20px;
+  }
 .reckoning-container {
   display: flex;
   flex-direction: column;
@@ -778,12 +783,11 @@ body {
 
 @media (max-width: 400px) {
   .tab-buttons button {
-    width: 63px;
-    font-size: 15px;
+    width: 68px;
+    font-size: 14px;
   }
 
   .symbols-section {
-    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     gap: 13px;
     padding: 12px;
   }

@@ -80,7 +80,7 @@ const BeamSmahserSolver = () => {
       </div>
 
       <div className="result" >
-        Result: {[resultado1, resultado2, resultado3].join("  ")}
+        Code: {[resultado1, resultado2, resultado3].join("  ")}
       </div>
     </section>
   );

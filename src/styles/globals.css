@@ -398,6 +398,13 @@ body {
   font-size: .9rem;
 }
 
+.item-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
 
 @keyframes fadeIn {
   from {

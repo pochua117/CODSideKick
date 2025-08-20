@@ -71,8 +71,6 @@ const BeamSmahserSolver = () => {
   return (
     <section className="section-numbers">
       <h2 translate="no">Beam Smasher puzzle solver</h2>
-      
-
       <div className="terminus-objects-section">
       {symbolSections.map((i) => (
         <SymbolSelection key={i} text={labels[i]} imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />

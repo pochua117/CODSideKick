@@ -38,7 +38,7 @@ const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}
           }
 
           return (
-            <button
+            <button className="symbol-container"
               key={btn.number}
               onClick={() => toggleSelect(btn)}
               style={{

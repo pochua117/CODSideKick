@@ -107,6 +107,7 @@ const FolderPuzzleSolver = () => {
 
       <ItemSelection allButtons={allButtons} selected={selected} setSelected={setSelected} /> 
 
+
       <p className="result">
         Code: {selected.length === 4 ? ` ${code}` : " - - - -"}
       </p>

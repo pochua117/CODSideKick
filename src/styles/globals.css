@@ -386,16 +386,19 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.objects-section button:hover {
-  border-color: #3a3a3a;
-}
-
 .objects-section button .oject-name {
   font-weight: 888;
 }
 
 .objects-section button .oject-extra {
   font-size: .9rem;
+}
+
+.item-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 

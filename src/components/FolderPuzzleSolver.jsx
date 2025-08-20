@@ -52,11 +52,11 @@ const FolderPuzzleSolver = () => {
 
           let bgColor;
           if (isSelected) {
-            bgColor = "#8a8a8a"; // Color si está seleccionado
+            bgColor = "#8a8a8a";
           } else if (maxSelected) {
-            bgColor = "#2e2e2e"; // Color de bloqueo si ya hay 4
+            bgColor = "#2e2e2e";
           } else {
-            bgColor = "#504d4a"; // Color normal
+            bgColor = "#504d4a";
           }
 
           return (

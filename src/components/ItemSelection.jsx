@@ -2,7 +2,6 @@
 
 const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}, maxLength }) => {  
 
-
   const toggleSelect = (btn) => {
     setSelected((prev) => {
       const exists = prev.find((item) => item.number === btn.number);
@@ -39,7 +38,7 @@ const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}
           }
 
           return (
-            <button
+            <button className="symbol-container"
               key={btn.number}
               onClick={() => toggleSelect(btn)}
               style={{

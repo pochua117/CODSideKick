@@ -150,16 +150,16 @@ body {
 }
 
 .section-numbers {
-  padding: 32px;
-  border-radius: 16px;
-  background: #2a2a2a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
   text-align: center;
   max-width: 500px;
   margin: auto;
 }
 
 .section-numbers h2 {
+  font-size: 32px;
+  font-weight: 700px;
   margin-bottom: 24px;
   color: #fff;
 }
@@ -395,6 +395,11 @@ body {
 }
 
 .terminus-objects-section {
+  font-size: 20px;
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center; 

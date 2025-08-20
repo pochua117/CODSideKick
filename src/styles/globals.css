@@ -399,6 +399,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; 
+  margin-bottom: 20px;
 }
 
 .item-selection {
@@ -410,8 +411,8 @@ body {
 }
 
 .item-selection button img{
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 .item-selection button {
@@ -577,6 +578,11 @@ body {
 .objects-section button .oject-extra {
   font-size: .9rem;
 }
+
+.item-selection button img{
+  width: 40px;
+  height: 40px;
+}
 }
 
 
@@ -688,6 +694,11 @@ body {
     width: 150px;
     gap: .35rem;
     padding: 5px 5px;
+  }
+
+  .item-selection button img{
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -812,5 +823,15 @@ body {
   width: 90px;
   gap: .35rem;
   padding: 5px 5px;
+}
+
+.item-selection {
+  gap: 5px;
+  padding: 2.5px;
+}
+
+.item-selection button img{
+  width: 25px;
+  height: 25px;
 }
 }

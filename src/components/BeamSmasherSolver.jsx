@@ -64,6 +64,8 @@ const BeamSmahserSolver = () => {
   },
 ];
 
+  const labels = ["X: ", "Y: ", "Z: "];
+
   const symbolSections = Array.from({ length: 3 }, (_, i) => i);
 
   return (
@@ -73,7 +75,7 @@ const BeamSmahserSolver = () => {
 
       <div className="terminus-objects-section">
       {symbolSections.map((i) => (
-        <SymbolSelection key={i} text="Ejemplo: " imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />
+        <SymbolSelection key={i} text={labels[i]} imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />
         ))}
       </div>
 

@@ -49,7 +49,7 @@ const BeamSmahserSolver = () => {
   {
     number: 21,
     content: (
-      <div className="symbol-container">
+      <div>
         <img className="symbol-image" src="../images/terminus/CruzRotada.svg" alt="CruzRotada" />
       </div>
     ),

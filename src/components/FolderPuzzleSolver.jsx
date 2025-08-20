@@ -74,25 +74,6 @@ const FolderPuzzleSolver = () => {
 
   const [selected, setSelected] = useState([]);
 
-  const toggleSelect = (btn) => {
-    setSelected((prev) => {
-      const exists = prev.find((item) => item.number === btn.number);
-
-      if (exists) {
-        // If it's already there, we remove it.
-        return prev.filter((item) => item.number !== btn.number);
-      } else {
-        // If it is not there and there are less than 4, we add it
-        if (prev.length < 4) {
-          return [...prev, btn];
-        }
-        return prev; // Ignore if there are already 4
-      }
-    });
-  };
-  
-  // Sort selected by month (oldest first)
-
   const sortedSelected = [...selected].sort(
     (a, b) => new Date(a.month) - new Date(b.month)
   );

@@ -65,7 +65,7 @@ const CitadellePage = () => {
           }
         >
           <SymbolsPuzzle
-            name="Symbols"
+            name="Symbols puzzle solver"
             length={20}
             resultlenght={6}
             imagesDir="../images/symbols/"
@@ -78,7 +78,7 @@ const CitadellePage = () => {
           }
         >
           <SymbolsPuzzle
-            name="Traps"
+            name="Traps puzzle solver"
             length={4}
             resultlenght={4}
             imagesDir="../images/traps/"
@@ -91,7 +91,7 @@ const CitadellePage = () => {
           }
         >
           <SymbolsPuzzle
-            name="Swords"
+            name="Swords puzzle solver"
             length={4}
             resultlenght={4}
             imagesDir="../images/animals/"
@@ -103,7 +103,10 @@ const CitadellePage = () => {
             activeTab === "puzzle4" ? "puzzle-visible" : "puzzle-hidden"
           }
         >
-          <SymbolsGallery imagesDir="../images/raven/" imageExtension="jpeg" length={5} imagesInfo={imagesInfo} />
+          <div>
+            <h2 className="symbols-title">Raven sword puzzle solver</h2>
+            <SymbolsGallery imagesDir="../images/raven/" imageExtension="jpeg" length={5} imagesInfo={imagesInfo} />
+          </div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}, maxLength }) => {  
 
+
   const toggleSelect = (btn) => {
     setSelected((prev) => {
       const exists = prev.find((item) => item.number === btn.number);
@@ -26,6 +27,7 @@ const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}
             (item) => item.number === btn.number
           );
           const maxSelected = selected.length === maxLength;
+
 
           let bgColor;
           if (isSelected) {

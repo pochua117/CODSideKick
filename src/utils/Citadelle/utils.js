@@ -1,21 +1,27 @@
 import { useState } from 'react'
 
 export function useNumbers() {
-  const [X, setX] = useState('')
-  const [Y, setY] = useState('')
-  const [Z, setZ] = useState('')
+  const [X, setX] = useState([])
+  const [Y, setY] = useState([])
+  const [Z, setZ] = useState([])
 
-  const resultado1 = (Number(X)*2 +11)
-  const resultado2 = (Number(Z)*2 + Number(Y) - 5)
-  const resultado3 = (Number(Y) + Number(Z) - Number(X))
-
+  if (X.length > 0 && Y.length > 0 && Z.length > 0) {
+  const resultado1 = (Number(X[0].number)*2 +11)
+  const resultado2 = (Number(Z[0].number)*2 + Number(Y[0].number) - 5)
+  const resultado3 = (Number(Y[0].number) + Number(Z[0].number) - Number(X[0].number))
+  return {
+    X, setX,
+    Y, setY,
+    Z, setZ,  
+    resultado1,
+    resultado2,
+    resultado3,
+  }  
+};
   return {
     X, setX,
     Y, setY,
     Z, setZ,
-    resultado1,
-    resultado2,
-    resultado3,
   }
 }
 

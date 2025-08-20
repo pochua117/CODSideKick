@@ -2,7 +2,6 @@
 
 const ItemSelection = ({ allButtons, selected = [], setSelected = function () {}, maxLength }) => {  
 
-
   const toggleSelect = (btn) => {
     setSelected((prev) => {
       const exists = prev.find((item) => item.number === btn.number);

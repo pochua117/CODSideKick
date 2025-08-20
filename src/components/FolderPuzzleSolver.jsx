@@ -60,7 +60,7 @@ const FolderPuzzleSolver = () => {
           }
 
           return (
-            <button
+            <button className="symbol-container"
               key={btn.number}
               onClick={() => toggleSelect(btn)}
               style={{

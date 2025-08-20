@@ -17,7 +17,7 @@ const BeamSmahserSolver = () => {
     {
     number: 0,
     content: (
-      <div className="symbol-container">
+      <div>
         <img className="symbol-image" src="../images/terminus/Circulo.svg" alt="Circulo" />
       </div>
     ),
@@ -25,7 +25,7 @@ const BeamSmahserSolver = () => {
   {
     number: 10,
     content: (
-      <div className="symbol-container">
+      <div>
         <img className="symbol-image" src="../images/terminus/DobleCirculo.svg" alt="DobleCirculo" />
       </div>
     ),
@@ -33,7 +33,7 @@ const BeamSmahserSolver = () => {
   {
     number: 11,
     content: (
-      <div className="symbol-container">
+      <div>
         <img className="symbol-image" src="../images/terminus/DobleCirculoRotado.svg" alt="DobleCirculoRotado" />
       </div>
     ),
@@ -41,7 +41,7 @@ const BeamSmahserSolver = () => {
   {
     number: 20,
     content: (
-      <div className="symbol-container">
+      <div>
         <img className="symbol-image" src="../images/terminus/Cruz.svg" alt="Cruz" />
       </div>
     ),
@@ -57,7 +57,7 @@ const BeamSmahserSolver = () => {
   {
     number: 22,
     content: (
-      <div className="symbol-container">
+      <div>
         <img className="symbol-image" src="../images/terminus/CruzRotadaInversa.svg" alt="CruzRotadaInversa" />
       </div>
     ),
@@ -71,10 +71,11 @@ const BeamSmahserSolver = () => {
       <h2 translate="no">Beam Smasher puzzle solver</h2>
       
 
+      <div className="terminus-objects-section">
       {symbolSections.map((i) => (
-        <SymbolSelection key={i} text="" imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />
+        <SymbolSelection key={i} text="Ejemplo: " imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />
         ))}
-      
+      </div>
 
       <div className="result" >
         Result: {[resultado1, resultado2, resultado3].join("  ")}

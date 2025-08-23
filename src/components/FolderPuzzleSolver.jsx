@@ -82,7 +82,8 @@ const FolderPuzzleSolver = () => {
 
   return (
     <section className="reckoning-container">
-      <h2 className="symbols-title">Folder Puzzle Solver</h2>
+      <h2 className="symbols-title">Folders Code Puzzle Solver</h2>
+      <h3 className="symbols-subtitle">Select four folders, documents to get the computer code</h3>
 
       <p className="result">{`Selected ${selected.length}/4`}</p>
     
@@ -90,7 +91,19 @@ const FolderPuzzleSolver = () => {
         <ItemSelection allButtons={allButtons} selected={selected} setSelected={setSelected} maxLength={4}/> 
       </div>
       <p className="result">
-        Code: {selected.length === 4 ? ` ${code}` : " - - - -"}
+        Code: 
+        {selected.length === 4 
+          ? code.split("").map((c, idx) => (
+              <span key={idx} className="result-box">
+                {c}
+              </span>
+            ))
+          : Array.from({ length: 4 }).map((_, idx) => (
+              <span key={idx} className="result-box">
+                <span style={{ visibility: "hidden" }}>0</span>
+              </span>
+            ))
+        }
       </p>
     </section>
   );

@@ -15,27 +15,38 @@ body {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1400px;
   padding: 0 20px;
   text-align: center;
   margin: auto;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 0px; 
 }
 
 .title {
   font-size: 60px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #66ccff, #9966ff);
+  font-weight: 780;
+  background: linear-gradient(90deg, #49c2ff, #8141ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  position: absolute;
-  font-size: 20px;
-  font-weight: 500;
-  color: #bbbbbb;
-  margin-bottom: 40px;
+  font-size: 35px;
+  font-weight: 0;
+  background: linear-gradient(90deg, #65cafc, #a071ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
 }
 
 .map-list {
@@ -44,7 +55,7 @@ body {
   gap: 30px;
   justify-content: center;
   align-content: center;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .card {
@@ -151,16 +162,16 @@ body {
 }
 
 .section-numbers {
-  padding: 32px;
-  border-radius: 16px;
-  background: #2a2a2a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
   text-align: center;
   max-width: 500px;
   margin: auto;
 }
 
 .section-numbers h2 {
+  font-size: 32px;
+  font-weight: 700px;
   margin-bottom: 24px;
   color: #fff;
 }
@@ -407,9 +418,15 @@ body {
 }
 
 .terminus-objects-section {
+  font-size: 20px;
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center; 
+  margin-bottom: 20px;
 }
 
 .item-selection {
@@ -421,8 +438,8 @@ body {
 }
 
 .item-selection button img{
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 .item-selection button {
@@ -433,6 +450,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+.result-box {
+  display: inline-block;
+  min-width: 25px;   
+  margin: 0 5px;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 255, 255); 
 }
 
 
@@ -610,6 +634,13 @@ body {
 .objects-section button .oject-extra {
   font-size: .9rem;
 }
+
+.item-selection button img{
+  width: 40px;
+  height: 40px;
+}
+
+
 }
 
 @media (max-width: 500px) {
@@ -729,6 +760,11 @@ body {
     width: 150px;
     gap: .35rem;
     padding: 5px 5px;
+  }
+
+  .item-selection button img{
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -917,4 +953,14 @@ body {
   .symbols-section {
     margin-bottom: 10px;
   }
+
+.item-selection {
+  gap: 5px;
+  padding: 2.5px;
+}
+
+.item-selection button img{
+  width: 25px;
+  height: 25px;
+}
 }

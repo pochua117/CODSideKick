@@ -9,12 +9,15 @@ export default function Home() {
         <title>Call Of Duty SideKick</title>
         <meta
           name="description"
-          content="Solve Call of Duty Black Ops 6 Zombies puzzles with puzzle solvers"
+          content="Solve Call of Duty Black Ops 6 Zombies Easter Egg puzzles with puzzle solvers"
         />
       </Head>
 
       <main className="App">
-        <h1 className="title">CODSideKick</h1>
+        <header className="header">
+          <h1 className="title">CODSideKick</h1>
+          <h2 className="subtitle">Solve Call of Duty Black Ops 6 Zombies Easter Egg puzzles</h2>
+        </header>
         <section className="map-list">
           {MAPS.map((map, index) => (
             <MapCard

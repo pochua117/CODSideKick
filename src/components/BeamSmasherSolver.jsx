@@ -64,21 +64,26 @@ const BeamSmahserSolver = () => {
   },
 ];
 
+  const labels = ["X: ", "Y: ", "Z: "];
+
   const symbolSections = Array.from({ length: 3 }, (_, i) => i);
 
   return (
     <section className="section-numbers">
       <h2 translate="no">Beam Smasher puzzle solver</h2>
-      
-
       <div className="terminus-objects-section">
       {symbolSections.map((i) => (
-        <SymbolSelection key={i} text="Ejemplo: " imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />
+        <SymbolSelection key={i} text={labels[i]} imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />
         ))}
       </div>
 
-      <div className="result" >
-        Result: {[resultado1, resultado2, resultado3].join("  ")}
+      <div className="result">
+        Code: 
+        {[resultado1, resultado2, resultado3].map((res, idx) => (
+          <span key={idx} className="result-box">
+            {res ? res : <span style={{ visibility: "hidden" }}>0</span>}
+          </span>
+        ))}
       </div>
     </section>
   );

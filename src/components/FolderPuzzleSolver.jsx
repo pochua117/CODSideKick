@@ -82,8 +82,8 @@ const FolderPuzzleSolver = () => {
 
   return (
     <section className="reckoning-container">
-      <h2 className="symbols-title">Folders, Documents Code Puzzle Solver</h2>
-      <h3 className="symbols-title">Solve the Folders, Documents puzzle by selecting four document, this page automatically orders them and gives you the correct code.</h3>
+      <h2 className="symbols-title">Folders Code Puzzle Solver</h2>
+      <h3 >Select four folders, documents to get the computer code</h3>
 
       <p className="result">{`Selected ${selected.length}/4`}</p>
   

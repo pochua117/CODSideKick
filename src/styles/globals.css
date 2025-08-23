@@ -968,6 +968,15 @@ body {
     width: 35px;
     height: 35px;
   }
+  .item-selection {
+    gap: 5px;
+    padding: 2.5px;
+  }
+
+  .item-selection button img{
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media (max-height: 670px) {
@@ -978,14 +987,4 @@ body {
   .symbols-section {
     margin-bottom: 10px;
   }
-
-.item-selection {
-  gap: 5px;
-  padding: 2.5px;
-}
-
-.item-selection button img{
-  width: 30px;
-  height: 30px;
-}
 }

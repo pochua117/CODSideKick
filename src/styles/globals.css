@@ -15,26 +15,38 @@ body {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1400px;
   padding: 0 20px;
   text-align: center;
   margin: auto;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 0px; 
 }
 
 .title {
   font-size: 60px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #66ccff, #9966ff);
+  font-weight: 780;
+  background: linear-gradient(90deg, #49c2ff, #8141ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: 20px;
-  font-weight: 500;
-  color: #bbbbbb;
-  margin-bottom: 40px;
+  font-size: 35px;
+  font-weight: 0;
+  background: linear-gradient(90deg, #65cafc, #a071ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
 }
 
 .map-list {
@@ -43,7 +55,7 @@ body {
   gap: 30px;
   justify-content: center;
   align-content: center;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .card {

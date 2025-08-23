@@ -458,6 +458,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
 .result-box {
   display: inline-block;
@@ -875,6 +876,7 @@ body {
     width: 160px;
     gap: .35rem;
     padding: 5px 5px;
+  }
   .symbols-title {
     font-size: 22px;
   }

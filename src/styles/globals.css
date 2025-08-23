@@ -15,26 +15,38 @@ body {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1400px;
   padding: 0 20px;
   text-align: center;
   margin: auto;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 0px; 
 }
 
 .title {
   font-size: 60px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #66ccff, #9966ff);
+  font-weight: 780;
+  background: linear-gradient(90deg, #49c2ff, #8141ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: 20px;
-  font-weight: 500;
-  color: #bbbbbb;
-  margin-bottom: 40px;
+  font-size: 35px;
+  font-weight: 0;
+  background: linear-gradient(90deg, #65cafc, #a071ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
 }
 
 .map-list {
@@ -43,7 +55,7 @@ body {
   gap: 30px;
   justify-content: center;
   align-content: center;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .card {
@@ -150,16 +162,16 @@ body {
 }
 
 .section-numbers {
-  padding: 32px;
-  border-radius: 16px;
-  background: #2a2a2a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
   text-align: center;
   max-width: 500px;
   margin: auto;
 }
 
 .section-numbers h2 {
+  font-size: 32px;
+  font-weight: 700px;
   margin-bottom: 24px;
   color: #fff;
 }
@@ -278,6 +290,8 @@ body {
 }
 
 .symbols-subtitle {
+  width: 500px;
+  position:static;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -331,6 +345,7 @@ body {
 }
 
 .symbol-container {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -353,8 +368,8 @@ body {
 }
 
 .symbol-extra {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .reckoning-container {
@@ -403,6 +418,11 @@ body {
 }
 
 .terminus-objects-section {
+  font-size: 20px;
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -426,13 +446,10 @@ body {
   border-radius: 6px;
 }
 
-.result-box {
-  display: inline-block;
-  min-width: 20px;   
-  margin: 0 5px;
-  text-align: center;
-  border-bottom: 2px solid rgb(255, 255, 255); 
-}
+.puzzle-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 .result-box {
   display: inline-block;
@@ -458,9 +475,9 @@ body {
 /* Responsive móvil */
 @media (max-width: 768px) {
   .tab-buttons button {
+    font-size: 17px;
     width: 90px;
-    font-size: 20px;
-  }
+    }
 
   .title {
     font-size: 36px;
@@ -523,13 +540,24 @@ body {
   }
 
   .symbols-title {
-    font-size: 25px;
+    font-size: 35px;
+  }
+
+  .symbols-subtitle {
+    width: 390px;
+    position:static;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
   }
 
   .symbols-section {
     grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
     gap: 8px;
     padding: 12px;
+    margin-bottom: 20px;
   }
 
   .symbol-image {
@@ -551,6 +579,11 @@ body {
     font-size: 10px;
     font-weight: bold;
     color: white;
+  }
+
+  .symbol-extra {
+  width: 20px;
+  height: 20px;
   }
 
 .reckoning-container {
@@ -609,8 +642,6 @@ body {
 
 
 }
-
-
 
 @media (max-width: 500px) {
   .tab-buttons button {
@@ -680,6 +711,16 @@ body {
 
   .symbols-title {
     font-size: 20px;
+  }
+
+  .symbols-subtitle {
+    width: 300px;
+    position:static;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
   }
 
   .symbols-section {
@@ -826,17 +867,28 @@ body {
     width: 160px;
     gap: .35rem;
     padding: 5px 5px;
+  .symbols-title {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 400px) {
+  .symbols-subtitle {
+    width: 300px;
+    position:static;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
+  }
+
   .tab-buttons button {
-    width: 63px;
-    font-size: 15px;
+    width: 68px;
+    font-size: 14px;
   }
 
   .symbols-section {
-    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     gap: 13px;
     padding: 12px;
   }
@@ -866,6 +918,53 @@ body {
   gap: .35rem;
   padding: 5px 5px;
 }
+}
+
+@media (max-width: 380px) {
+  .symbols-subtitle {
+    width: 280px;
+    position:static;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
+  }
+
+  .tab-buttons button {
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .tab-buttons{
+    gap: 10px;
+  }
+
+  .symbols-section {
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .symbol-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .drop-slot {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-height: 670px) {
+  .symbols-title {
+    font-size: 19px;
+  }
+
+  .symbols-section {
+    margin-bottom: 10px;
+  }
 
 .item-selection {
   gap: 5px;

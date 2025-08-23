@@ -86,7 +86,7 @@ const FolderPuzzleSolver = () => {
       <h3 className="symbols-subtitle">Select four folders, documents to get the computer code</h3>
 
       <p className="result">{`Selected ${selected.length}/4`}</p>
-  
+    
       <div className="objects-section">
         <ItemSelection allButtons={allButtons} selected={selected} setSelected={setSelected} maxLength={4}/> 
       </div>

@@ -70,7 +70,8 @@ const BeamSmahserSolver = () => {
 
   return (
     <section className="section-numbers">
-      <h2 translate="no">Beam Smasher puzzle solver</h2>
+      <h2 translate="no">Beam Smasher Puzzle Code Calculator</h2>
+      <h3 className="terminus-subtitle"translate="no">Choose the three computer symbols to get the correct puzzle code.</h3>
       <div className="terminus-objects-section">
       {symbolSections.map((i) => (
         <SymbolSelection key={i} text={labels[i]} imagesDir="../images/symbols/" allButtons={allButtons} selected={symbolStates[i][0]} setSelected={symbolStates[i][1]} />

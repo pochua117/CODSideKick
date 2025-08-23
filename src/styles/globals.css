@@ -284,7 +284,7 @@ body {
 .symbols-title {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #fff;
   text-align: center;
 }
@@ -382,7 +382,7 @@ body {
 
 .objects-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 12px;
   margin-bottom: 40px;
   padding: 20px;
@@ -396,7 +396,7 @@ body {
   font-size: 15px;
   display: grid;
   align-items: center;
-  width: 150px;
+  width: 200px;
   text-align: left;
   gap: .30rem;
   padding: 13px 5px;
@@ -596,7 +596,7 @@ body {
 
 .objects-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 12px;
   margin-bottom: 40px;
   padding: 20px;
@@ -610,7 +610,7 @@ body {
   font-size: 10px;
   display: grid;
   align-items: center;
-  width: 90px;
+  width: 170px;
   text-align: left;
   gap: .30rem;
   padding: 13px 5px;
@@ -749,7 +749,7 @@ body {
   }
 
   .objects-section {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 10px;
     margin-bottom: 40px;
     padding: 17px;
@@ -757,7 +757,7 @@ body {
 
   .objects-section button{
     font-size: 10px;
-    width: 150px;
+    width: 170px;
     gap: .35rem;
     padding: 5px 5px;
   }
@@ -855,6 +855,18 @@ body {
 }
 
 @media (max-width: 430px) {
+  .objects-section {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 17px;
+  }
+
+  .objects-section button{
+    font-size: 10px;
+    width: 160px;
+    gap: .35rem;
+    padding: 5px 5px;
   .symbols-title {
     font-size: 22px;
   }
@@ -894,7 +906,7 @@ body {
 }
 
 .objects-section {
-  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 5px;
   margin-bottom: 40px;
   padding: 7px;

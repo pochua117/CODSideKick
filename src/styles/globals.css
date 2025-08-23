@@ -31,6 +31,7 @@ body {
 }
 
 .subtitle {
+  position: absolute;
   font-size: 20px;
   font-weight: 500;
   color: #bbbbbb;
@@ -278,6 +279,8 @@ body {
 }
 
 .symbols-subtitle {
+  width: 500px;
+  position:static;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -426,6 +429,12 @@ body {
   border-radius: 6px;
 }
 
+.puzzle-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 @keyframes fadeIn {
   from {
@@ -442,9 +451,9 @@ body {
 /* Responsive móvil */
 @media (max-width: 768px) {
   .tab-buttons button {
+    font-size: 17px;
     width: 90px;
-    font-size: 20px;
-  }
+    }
 
   .title {
     font-size: 36px;
@@ -507,13 +516,24 @@ body {
   }
 
   .symbols-title {
-    font-size: 25px;
+    font-size: 35px;
+  }
+
+  .symbols-subtitle {
+    width: 390px;
+    position:static;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
   }
 
   .symbols-section {
     grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
     gap: 8px;
     padding: 12px;
+    margin-bottom: 20px;
   }
 
   .symbol-image {
@@ -541,6 +561,7 @@ body {
   width: 20px;
   height: 20px;
   }
+
 .reckoning-container {
   display: flex;
   flex-direction: column;
@@ -590,8 +611,6 @@ body {
   font-size: .9rem;
 }
 }
-
-
 
 @media (max-width: 500px) {
   .tab-buttons button {
@@ -661,6 +680,16 @@ body {
 
   .symbols-title {
     font-size: 20px;
+  }
+
+  .symbols-subtitle {
+    width: 300px;
+    position:static;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
   }
 
   .symbols-section {
@@ -789,7 +818,23 @@ body {
   }
 }
 
+@media (max-width: 430px) {
+  .symbols-title {
+    font-size: 22px;
+  }
+}
+
 @media (max-width: 400px) {
+  .symbols-subtitle {
+    width: 300px;
+    position:static;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
+  }
+
   .tab-buttons button {
     width: 68px;
     font-size: 14px;
@@ -825,4 +870,51 @@ body {
   gap: .35rem;
   padding: 5px 5px;
 }
+}
+
+@media (max-width: 380px) {
+  .symbols-subtitle {
+    width: 280px;
+    position:static;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    text-align: center;
+  }
+
+  .tab-buttons button {
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .tab-buttons{
+    gap: 10px;
+  }
+
+  .symbols-section {
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .symbol-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .drop-slot {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-height: 670px) {
+  .symbols-title {
+    font-size: 19px;
+  }
+
+  .symbols-section {
+    margin-bottom: 10px;
+  }
 }

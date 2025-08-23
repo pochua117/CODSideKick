@@ -7,10 +7,10 @@ export default function Reckoning() {
   return (
     <>
       <Head>
-        <title>Reckoning - Call of Duty Zombies</title>
+        <title>Reckoning Easter Egg - BO6 Zombies Puzzles Solvers</title>
         <meta 
           name="description" 
-          content="Solve Reckoning puzzles with puzzle solvers."
+          content="Solve the Call of Duty Black Ops 6 Zombies Reckoning Easter Egg. Use this folders computer code puzzle solver and periodic table door code puzzle for Reckoning."
         />
       </Head>
 

@@ -83,7 +83,7 @@ const FolderPuzzleSolver = () => {
   return (
     <section className="reckoning-container">
       <h2 className="symbols-title">Folders Code Puzzle Solver</h2>
-      <h3 className="symbols-subtitle">Select four folders, documents to get the computer code</h3>
+      <h3 className="reckoning-subtitle">Select four folders, documents to get the computer code</h3>
 
       <p className="result">{`Selected ${selected.length}/4`}</p>
     

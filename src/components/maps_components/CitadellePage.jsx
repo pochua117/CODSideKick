@@ -80,7 +80,7 @@ const CitadellePage = () => {
         <div className={activeTab === "puzzle4" ? "puzzle-visible" : "puzzle-hidden"}>
           <div>
             <h2 className="symbols-title">Raven Sword Puzzle Solver</h2>
-            <h3 className="symbols-title">
+            <h3 className="symbols-subtitle">
               Solve the Raven sword puzzle by finding the fossil and selecting its corresponding zodiac symbol and element. On this page, you can see each fossil with its symbols for reference.
             </h3>
             <SymbolsGallery 

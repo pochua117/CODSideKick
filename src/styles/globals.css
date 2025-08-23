@@ -277,6 +277,14 @@ body {
   text-align: center;
 }
 
+.symbols-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #6e6e6e;
+  text-align: center;
+}
+
 .puzzle-hidden {
   display: none;
 }

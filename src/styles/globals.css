@@ -221,9 +221,9 @@ body {
 
 .symbols-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
   gap: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: #2a2a2a;
   border-radius: 12px;
@@ -232,8 +232,8 @@ body {
 }
 
 .symbol-image {
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   object-fit: contain;
   border-radius: 8px;
   cursor: grab;
@@ -290,7 +290,7 @@ body {
 }
 
 .symbols-subtitle {
-  width: 500px;
+  width: 600px;
   position:static;
   font-size: 15px;
   font-weight: 700;
@@ -299,7 +299,8 @@ body {
   text-align: center;
 }
 
-.reckoning-subtitle {
+.reckoning-subtitle,
+.terminus-subtitle {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -320,10 +321,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 .tab-buttons button {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -877,6 +879,7 @@ body {
     gap: .35rem;
     padding: 5px 5px;
   }
+
   .symbols-title {
     font-size: 22px;
   }
@@ -982,7 +985,7 @@ body {
 }
 
 .item-selection button img{
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 }

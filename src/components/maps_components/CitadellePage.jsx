@@ -1,4 +1,5 @@
 import { useState } from "react"; 
+
 import SymbolsPuzzle from "../SymbolsPuzzle";
 import PuzzleButton from "../PuzzleButton";
 import SymbolsGallery from "../SymbolsGallery";

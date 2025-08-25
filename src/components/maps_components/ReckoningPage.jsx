@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import FolderPuzzleSolver from "../FolderPuzzleSolver.jsx";
+import DoorTablePuzzleSolver from "../DoorTablePuzzleSolver.jsx";
 import PuzzleButton from "../PuzzleButton.jsx";
 
 const ReckoningPage = () => {

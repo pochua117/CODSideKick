@@ -4,9 +4,10 @@ import InputBox from "./InputBox";
 import { tableElements } from "../constants.js";
 
 const DoorTablePuzzleSolver = () => {
-    const [element, setElement] = useState("");
+    const [elementOne, setElementOne] = useState("");
+    const [elementTwo, setElementTwo] = useState("");
 
-    const result = tableElements.find((item) => item.name === element.toUpperCase());
+    const result = tableElements.find((item) => item.name === elementOne.toUpperCase() + elementTwo.toUpperCase());
 
     return (
     <div>
@@ -15,7 +16,10 @@ const DoorTablePuzzleSolver = () => {
         <h3 className="symbols-subtitle">
             Solve the lab door puzzle. Enter the first letter of each monitor, and get the door code 
         </h3>
-        <InputBox className="input-box" setFunction={setElement} value={element} onlyNumbers={false}/>
+        <div className="input-group">
+            <InputBox placeholder="First letter" setFunction={setElementOne} value={elementOne} onlyNumbers={false}/>
+            <InputBox placeholder="Second letter" setFunction={setElementTwo} value={elementTwo} onlyNumbers={false}/>
+        </div>
         <p className="result">
         Door Code: 
         {result

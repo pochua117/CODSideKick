@@ -177,19 +177,28 @@ body {
 }
 
 .input-group {
+  font-size: 20px;
+  color: #eee;
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 16px;
   margin-bottom: 24px;
 }
 
 .input-group input {
-  width: 100px;
-  height: 100px;
-  font-size: 36px;
+  width: 200px;
+  height: 70px;
+  font-size: 25px;
   border: 2px solid #888;
   border-radius: 12px;
-  text-align: center;
+  padding: 10px;
   background: #fff;
   color: #000;
   font-weight: bold;

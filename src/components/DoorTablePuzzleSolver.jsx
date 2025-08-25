@@ -14,7 +14,7 @@ const DoorTablePuzzleSolver = () => {
       <div className="puzzle-header">
         <h2 className="symbols-title">Door Code Puzzle Solver</h2>
         <h3 className="symbols-subtitle">
-            Solve the lab door puzzle. Enter the first letter of each monitor, and get the door code 
+            Solve the lab door code puzzle. Enter the first letter of each monitor.
         </h3>
         <div className="input-group">
             <InputBox placeholder="First letter" setFunction={setElementOne} value={elementOne} onlyNumbers={false}/>

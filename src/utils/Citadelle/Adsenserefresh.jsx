@@ -7,11 +7,17 @@ export default function AdsenseRefresh() {
 
   useEffect(() => {
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      const ads = document.querySelectorAll("ins.adsbygoogle");
+      ads.forEach(ad => {
+        if (!ad.dataset.adsbygoogleDone) {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+          ad.dataset.adsbygoogleDone = "true"; // marcar como inicializado
+        }
+      });
     } catch (err) {
       console.error("Adsense refresh error:", err);
     }
   }, [pathname]);
 
-  return null; // Este componente solo fuerza el refresh
+  return null;
 }

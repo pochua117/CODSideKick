@@ -11,11 +11,10 @@ export default function Document() {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5744019936036430"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
+      <Script 
+        async 
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5744019936036430"
+        crossorigin="anonymous"
         />
       </Head>
       <body>

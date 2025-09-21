@@ -112,6 +112,14 @@ body {
   padding: 40px 20px;
 }
 
+.map-page-content {
+  display: flex;
+}
+
+.ad {
+  width: 300px;
+}
+
 .map-card {
   position: relative;
   display: flex;

@@ -8,9 +8,10 @@ const MapPageContent = ({ children, mapName }) => {
   const config = adsConfig[mapName.toLowerCase()] || {};
 
   return (
-    <div style={{ display: "flex", gap: "20px" }}>
+    <div className="map-page-content">
       {/* Anuncio izquierda */}
-      {/*<aside style={{ flex: "1" }}>
+      {mapName === "test" &&
+      <aside className="ad" style={{ border: "1px solid red" }}>
         {config.left && <AdBanner slot={config.left} />}
       </aside>}
 
@@ -26,9 +27,10 @@ const MapPageContent = ({ children, mapName }) => {
       </section>
 
       {/* Anuncio derecha */}
-      {/*<aside style={{ flex: "1" }}>
+      {mapName === "test" && 
+      <aside className="ad" style={{border: "1px solid red"  }}>
         {config.right && <AdBanner slot={config.right} />}
-      </aside>*/}
+      </aside>}
     </div>
   );
 };

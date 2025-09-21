@@ -7,7 +7,7 @@ export const adsConfig = {
     left: "2558578980",
     right: "1245497313",
   },
-  "Reckoning": {
+  "test": {
     left: "1368522914",
     right: "6816005309",
   },

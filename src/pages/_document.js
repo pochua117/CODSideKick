@@ -12,11 +12,10 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
 
       <Script 
-      //  async 
-      //  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5744019936036430"
-      //  crossorigin="anonymous"
-      //  
-      />
+        async 
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5744019936036430"
+        crossorigin="anonymous"
+        />
       </Head>
       <body>
         <Main />

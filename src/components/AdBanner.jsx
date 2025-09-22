@@ -18,11 +18,10 @@ export default function AdBanner({ adSlot }) {
   return (
     <ins
       ref={adRef}
-      className="adsbygoogle"
+      className="adsbygoogle ad"
       style={{ display: "block" }}
       data-ad-client="ca-pub-5744019936036430"
       data-ad-slot={adSlot}
-      data-ad-format="fluid, vertical"
       data-full-width-responsive="true"
     ></ins>
   );

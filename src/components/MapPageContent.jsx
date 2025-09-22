@@ -10,8 +10,7 @@ const MapPageContent = ({ children, mapName }) => {
   return (
     <div className="map-page-content">
       {/* Anuncio izquierda */}
-      {mapName === "test" &&
-        config.left && <AdBanner adSlot={config.left} />}
+      {config.left && <AdBanner adSlot={config.left} />}
 
       {/* Contenido del mapa */}
       <section className="map-page" style={{ flex: "2" }}>
@@ -25,8 +24,12 @@ const MapPageContent = ({ children, mapName }) => {
       </section>
 
       {/* Anuncio derecha */}
+      {config.right && <AdBanner adSlot={config.right} />}
+
+      {/* Anuncio abajo */}
       {mapName === "test" && 
-        config.right && <AdBanner adSlot={config.right} />}
+      config.down && <AdBanner adSlot={config.down} className="ad-banner-down" />}
+
     </div>
   );
 };

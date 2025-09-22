@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export default function AdBanner({ adSlot }) {
+export default function AdBanner({ adSlot, className="ad" }) {
   const adRef = useRef(null);
 
   useEffect(() => {
@@ -18,8 +18,8 @@ export default function AdBanner({ adSlot }) {
   return (
     <ins
       ref={adRef}
-      className="adsbygoogle ad"
-      style={{ display: "block" }}
+      className={`adsbygoogle ${className}`}
+      style={{ display: "block", border: "3px solid #ff0000ff"}}
       data-ad-client="ca-pub-5744019936036430"
       data-ad-slot={adSlot}
       data-full-width-responsive="true"

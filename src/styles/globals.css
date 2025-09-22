@@ -116,8 +116,17 @@ body {
   display: flex;
 }
 
-  .ad {
+.ad {
   width: 300px;
+}
+
+.ad-banner-down {
+  position: fixed;
+  width: 1000px;
+  height: 100px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .map-card {

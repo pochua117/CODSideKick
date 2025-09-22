@@ -521,6 +521,10 @@ body {
 
   .ad-right { display: none; }   /* ocultar izquierda */
 
+  .adsbygoogle {
+    width: 100%;
+    height: 100px;
+  }
 
   .ad-left, .ad-right {
     width: 100%;

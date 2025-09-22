@@ -528,15 +528,11 @@ body {
   align-items: center;
   }
 
-  .ad-right { display: none; }   /* ocultar izquierda */
+  .ad-banner-down { display: none !important; }
 
   .ad {
     width: 100%;
     height: 100px;
-  }
-
-  .ad-banner-down {
-    width: 150px;
   }
 }
 

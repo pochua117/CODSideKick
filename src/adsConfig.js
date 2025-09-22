@@ -3,7 +3,7 @@ export const adsConfig = {
     left: "5858146858",
     right: "1572800370",
   },
-  "Citadelle Des Morts": {
+  "Citadelle des Morts": {
     left: "2558578980",
     right: "1245497313",
   },

@@ -11,8 +11,8 @@ const MapPageContent = ({ children, mapName }) => {
     <div className="map-page-content">
       {/* Anuncio izquierda */}
       {mapName === "test" &&
-      <aside className="ad" style={{ border: "1px solid red" }}>
-        {config.left && <AdBanner slot={config.left} />}
+      <aside className="ad-left" style={{ border: "1px solid red" }}>
+        {config.left && <AdBanner adSlot={config.left} />}
       </aside>}
 
       {/* Contenido del mapa */}
@@ -28,8 +28,8 @@ const MapPageContent = ({ children, mapName }) => {
 
       {/* Anuncio derecha */}
       {mapName === "test" && 
-      <aside className="ad" style={{border: "1px solid red"  }}>
-        {config.right && <AdBanner slot={config.right} />}
+      <aside className="ad-right" style={{border: "1px solid red"  }}>
+        {config.right && <AdBanner adSlot={config.right} />}
       </aside>}
     </div>
   );

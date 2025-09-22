@@ -116,7 +116,7 @@ body {
   display: flex;
 }
 
-.ad {
+.ad-left, .ad-right {
   width: 300px;
 }
 
@@ -501,6 +501,33 @@ body {
 }
 
 /* Responsive móvil */
+
+@media (max-width: 1180px) {
+  .map-page-content {
+  display: flex;
+  }
+
+  .ad-left, .ad-right {
+    width: 200px;
+  }
+}
+
+@media (max-width: 850px) {
+  .map-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .ad-right { display: none; }   /* ocultar izquierda */
+
+
+  .ad-left, .ad-right {
+    width: 100%;
+    height: 100px;
+  }
+}
+
 @media (max-width: 768px) {
   .tab-buttons button {
     font-size: 17px;
@@ -771,7 +798,7 @@ body {
 
   .objects-section button{
     font-size: 10px;
-    width: 170px;
+    max-width: 170px;
     gap: .35rem;
     padding: 5px 5px;
   }
@@ -862,6 +889,23 @@ body {
   }
 }
 
+@media (max-width: 451px) {
+  .objects-section {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 17px;
+  }
+
+  .objects-section button{
+    font-size: 10px;
+    width: 155px;
+    gap: .35rem;
+    padding: 5px 5px;
+  }
+  
+}
+
 @media (max-width: 430px) {
   .objects-section {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -872,13 +916,28 @@ body {
 
   .objects-section button{
     font-size: 10px;
-    width: 160px;
     gap: .35rem;
     padding: 5px 5px;
   }
 
   .symbols-title {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 411px) {
+  .objects-section {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 17px;
+  }
+
+  .objects-section button{
+    font-size: 10px;
+    width: 140px;
+    gap: .35rem;
+    padding: 5px 5px;
   }
 }
 

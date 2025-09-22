@@ -19,7 +19,7 @@ export default function AdBanner({ adSlot, className="ad" }) {
     <ins
       ref={adRef}
       className={`adsbygoogle ${className}`}
-      style={{ display: "block", border: "3px solid #ff0000ff"}}
+      style={{ display: "block" }}
       data-ad-client="ca-pub-5744019936036430"
       data-ad-slot={adSlot}
       data-full-width-responsive="true"

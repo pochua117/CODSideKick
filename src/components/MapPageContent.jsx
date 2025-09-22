@@ -12,7 +12,6 @@ const MapPageContent = ({ children, mapName }) => {
       {/* Anuncio izquierda */}
       {mapName === "test" &&
       <aside className="ad" style={{ border: "1px solid red" }}>
-        {config.left && <AdBanner slot={config.left} />}
       </aside>}
 
       {/* Contenido del mapa */}
@@ -29,7 +28,6 @@ const MapPageContent = ({ children, mapName }) => {
       {/* Anuncio derecha */}
       {mapName === "test" && 
       <aside className="ad" style={{border: "1px solid red"  }}>
-        {config.right && <AdBanner slot={config.right} />}
       </aside>}
     </div>
   );

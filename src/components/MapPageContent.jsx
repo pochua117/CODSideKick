@@ -27,8 +27,7 @@ const MapPageContent = ({ children, mapName }) => {
       {config.right && <AdBanner adSlot={config.right} />}
 
       {/* Anuncio abajo */}
-      {mapName === "test" && 
-      config.down && <AdBanner adSlot={config.down} className="ad-banner-down" />}
+      {config.down && <AdBanner adSlot={config.down} className="ad-banner-down" />}
 
     </div>
   );

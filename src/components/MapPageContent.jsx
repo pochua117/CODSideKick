@@ -5,7 +5,7 @@ import { adsConfig } from "@/adsConfig";
 
 const MapPageContent = ({ children, mapName }) => {
   // Buscar slots según el nombre del mapa
-  const config = adsConfig[mapName.toLowerCase()] || {};
+  const config = adsConfig[mapName] || {};
 
   return (
     <div className="map-page-content">

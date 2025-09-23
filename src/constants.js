@@ -4,24 +4,47 @@ const CitadellePage = lazy(() => import('./components/maps_components/CitadelleP
 const TerminusPage = lazy(() => import('./components/maps_components/TerminusPage.jsx'));
 const ReckoningPage = lazy(() => import('./components/maps_components/ReckoningPage.jsx'));
 
-export const MAPS = [
+export const BO6MAPS = [
   {
     Name: 'Terminus',
     Image: 'terminus.jpg',
-    Link: '/maps/terminus',
+    Link: '/bo6/maps/terminus',
     Component: TerminusPage
   },
   {
     Name: 'Citadelle Des Morts',
     Image: 'citadelle.jpg',
-    Link: '/maps/citadelle',
+    Link: '/bo6/maps/citadelle',
     Component: CitadellePage
   },
   {
     Name: 'Reckoning',
     Image: 'reckoning.jpg',
-    Link: '/maps/reckoning',
+    Link: '/bo6/maps/reckoning',
     Component: ReckoningPage
+  }
+];
+
+export const BO7MAPS = [
+  {
+    Name: 'Ashes of the Damned',
+    Image: 'ashes.jpg',
+    State: 'Soon',
+    Component: TerminusPage
+  },
+];
+
+export const GAMES = [
+  {
+    Name: 'Black Ops 6',
+    Image: 'bo6.jpg',
+    Link: '/bo6',
+  },
+  {
+    Name: 'Black Ops 7',
+    Image: 'bo7.jpg',
+    Link: '/bo7',
+    State: 'New',
   }
 ];
 

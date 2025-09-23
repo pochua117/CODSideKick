@@ -3,7 +3,7 @@ import Link from "next/link";
 import AdBanner from "./AdBanner";
 import { adsConfig } from "@/adsConfig";
 
-const MapPageContent = ({ children, mapName }) => {
+const MapPageContent = ({ children, mapName, game }) => {
   // Buscar slots según el nombre del mapa
   const config = adsConfig[mapName] || {};
 
@@ -15,7 +15,7 @@ const MapPageContent = ({ children, mapName }) => {
       {/* Contenido del mapa */}
       <section className="map-page" style={{ flex: "2" }}>
         <header className="map-card-header">
-          <Link href="/" className="close-button">
+          <Link href={`/${game}`} className="close-button">
             Back
           </Link>
           <h1 translate="no">{mapName}</h1>

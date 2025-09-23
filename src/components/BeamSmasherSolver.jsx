@@ -18,7 +18,7 @@ const BeamSmahserSolver = () => {
     number: 0,
     content: (
       <div>
-        <img src="../images/terminus/Circulo.svg" alt="Circulo" />
+        <img src="../../images/terminus/Circulo.svg" alt="Circulo" />
       </div>
     ),
   },
@@ -26,7 +26,7 @@ const BeamSmahserSolver = () => {
     number: 10,
     content: (
       <div>
-        <img src="../images/terminus/DobleCirculo.svg" alt="DobleCirculo" />
+        <img src="../../images/terminus/DobleCirculo.svg" alt="DobleCirculo" />
       </div>
     ),
   },
@@ -34,7 +34,7 @@ const BeamSmahserSolver = () => {
     number: 11,
     content: (
       <div>
-        <img src="../images/terminus/DobleCirculoRotado.svg" alt="DobleCirculoRotado" />
+        <img src="../../images/terminus/DobleCirculoRotado.svg" alt="DobleCirculoRotado" />
       </div>
     ),
   },
@@ -42,7 +42,7 @@ const BeamSmahserSolver = () => {
     number: 20,
     content: (
       <div>
-        <img src="../images/terminus/Cruz.svg" alt="Cruz" />
+        <img src="../../images/terminus/Cruz.svg" alt="Cruz" />
       </div>
     ),
   },
@@ -50,7 +50,7 @@ const BeamSmahserSolver = () => {
     number: 21,
     content: (
       <div>
-        <img src="../images/terminus/CruzRotada.svg" alt="CruzRotada" />
+        <img src="../../images/terminus/CruzRotada.svg" alt="CruzRotada" />
       </div>
     ),
   },
@@ -58,7 +58,7 @@ const BeamSmahserSolver = () => {
     number: 22,
     content: (
       <div>
-        <img src="../images/terminus/CruzRotadaInversa.svg" alt="CruzRotadaInversa" />
+        <img src="../../images/terminus/CruzRotadaInversa.svg" alt="CruzRotadaInversa" />
       </div>
     ),
   },

@@ -25,6 +25,21 @@ export const MAPS = [
   }
 ];
 
+//export const GAMES = [
+//  {
+//    Name: 'Black Ops 6',
+//    Image: 'bo6.jpg',
+//    Link: '/bo6',
+//    Component: BOSixPage
+//  },
+//  {
+//    Name: 'Black Ops 7',
+//    Image: 'bo7.jpg',
+//    Link: '/bo7',
+//    Component: BOSevenPage
+//  }
+//];
+
 export const tableElements = [
   {name:"H", atomic:"001"},
   {name:"HE", atomic:"002"},

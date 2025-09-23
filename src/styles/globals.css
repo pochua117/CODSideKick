@@ -72,6 +72,11 @@ body {
   background-color: #1f1f1f;
 }
 
+.new-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
 .soon-card {
   position: relative;
   display: flex;
@@ -86,7 +91,7 @@ body {
 }
 
 .soon-card .card-image img {
-  filter: grayscale(100%);
+  filter: brightness(0.3) grayscale(100%);
 }
 
 .soon-card::after {
@@ -95,8 +100,8 @@ body {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0); /* semitransparente */
-  color: rgb(25, 0, 255);
+  background: rgba(0, 0, 0, 0);
+  color: #Ff7e00;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -111,7 +116,7 @@ body {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0); /* semitransparente */
+  background: rgba(0, 0, 0, 0);
   color: rgb(0, 255, 21);
   font-size: 1.5rem;
   font-weight: bold;
@@ -596,6 +601,13 @@ body {
 }
 
 @media (max-width: 850px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 7vh; 
+  }
+
   .map-page-content {
   display: flex;
   flex-direction: column;
@@ -632,6 +644,24 @@ body {
   .card {
     width: 100%;
     height: 220px;
+  }
+
+  .new-card {
+    width: 100%;
+    height: 220px;
+  }
+
+  .new-card::after {
+    font-size: 1.2rem;
+  }
+
+  .soon-card {
+    width: 100%;
+    height: 220px;
+  }
+
+  .soon-card::after {
+    font-size: 1.2rem;
   }
 
   .card-text {

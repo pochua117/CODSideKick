@@ -8,37 +8,35 @@ export const MAPS = [
   {
     Name: 'Terminus',
     Image: 'terminus.jpg',
-    Link: '/maps/terminus',
+    Link: '/bo6/maps/terminus',
     Component: TerminusPage
   },
   {
     Name: 'Citadelle Des Morts',
     Image: 'citadelle.jpg',
-    Link: '/maps/citadelle',
+    Link: '/bo6/maps/citadelle',
     Component: CitadellePage
   },
   {
     Name: 'Reckoning',
     Image: 'reckoning.jpg',
-    Link: '/maps/reckoning',
+    Link: '/bo6/maps/reckoning',
     Component: ReckoningPage
   }
 ];
 
-//export const GAMES = [
-//  {
-//    Name: 'Black Ops 6',
-//    Image: 'bo6.jpg',
-//    Link: '/bo6',
-//    Component: BOSixPage
-//  },
-//  {
-//    Name: 'Black Ops 7',
-//    Image: 'bo7.jpg',
-//    Link: '/bo7',
-//    Component: BOSevenPage
-//  }
-//];
+export const GAMES = [
+  {
+    Name: 'bo6',
+    Image: 'bo6.jpg',
+    Link: '/bo6',
+  },
+  {
+    Name: 'bo7',
+    Image: 'bo7.jpg',
+    Link: '/bo7',
+  }
+];
 
 export const tableElements = [
   {name:"H", atomic:"001"},

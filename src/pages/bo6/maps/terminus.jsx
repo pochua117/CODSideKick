@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import TerminusPage from "../../components/maps_components/TerminusPage";
+import TerminusPage from "../../../components/maps_components/TerminusPage";
 import MapPageContent from "@/components/MapPageContent";
 
 export default function Terminus() {

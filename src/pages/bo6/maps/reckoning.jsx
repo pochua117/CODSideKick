@@ -1,6 +1,6 @@
 import Head from "next/head"; 
 
-import ReckoningPage from "../../components/maps_components/ReckoningPage"; 
+import ReckoningPage from "../../../components/maps_components/ReckoningPage"; 
 import MapPageContent from "@/components/MapPageContent";
 
 export default function Reckoning() {

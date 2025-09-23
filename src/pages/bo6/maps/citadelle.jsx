@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import CitadellePage from "../../components/maps_components/CitadellePage";
+import CitadellePage from "../../../components/maps_components/CitadellePage";
 import MapPageContent from "@/components/MapPageContent";
 
 export default function Citadelle() {

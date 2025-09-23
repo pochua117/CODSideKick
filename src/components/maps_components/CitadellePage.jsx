@@ -48,7 +48,7 @@ const CitadellePage = () => {
             description="Solve the Wall Symbols puzzle by arranging the symbols in the correct order. You can drag them or click a symbol and then the slot to place it."
             length={20}
             resultlenght={6}
-            imagesDir="../images/symbols/"
+            imagesDir="../../images/symbols/"
             imageExtension="jpeg"
           />
         </div>
@@ -60,7 +60,7 @@ const CitadellePage = () => {
             description="Solve the traps puzzle arranging the symbols in the same order as shown in the book. You can drag them or click a symbol and then the slot to place it."
             length={4}
             resultlenght={4}
-            imagesDir="../images/traps/"
+            imagesDir="../../images/traps/"
             imageExtension="svg"
           />
         </div>
@@ -72,7 +72,7 @@ const CitadellePage = () => {
             description="Solve the swords puzzle arranging the symbols in the same order as shown in the wall. You can drag them or click a symbol and then the slot to place it."
             length={4}
             resultlenght={4}
-            imagesDir="../images/animals/"
+            imagesDir="../../images/animals/"
             imageExtension="svg"
           />
         </div>
@@ -87,7 +87,7 @@ const CitadellePage = () => {
               </h3>
             </div>
             <SymbolsGallery 
-              imagesDir="../images/raven/" 
+              imagesDir="../../images/raven/" 
               imageExtension="jpeg" 
               length={5} 
               imagesInfo={imagesInfo} 

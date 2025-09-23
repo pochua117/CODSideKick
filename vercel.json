@@ -1,5 +1,22 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
+  ],
+    "redirects": [
+    {
+      "source": "/maps/terminus",
+      "destination": "/bo6/maps/terminus",
+      "permanent": true
+    },
+    {
+      "source": "/maps/citadelle",
+      "destination": "/bo6/maps/citadelle",
+      "permanent": true
+    },
+    {
+      "source": "/maps/reckoning",
+      "destination": "/bo6/maps/reckoning",
+      "permanent": true
+    }
   ]
 }

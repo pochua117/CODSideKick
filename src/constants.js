@@ -4,7 +4,7 @@ const CitadellePage = lazy(() => import('./components/maps_components/CitadelleP
 const TerminusPage = lazy(() => import('./components/maps_components/TerminusPage.jsx'));
 const ReckoningPage = lazy(() => import('./components/maps_components/ReckoningPage.jsx'));
 
-export const MAPS = [
+export const BO6MAPS = [
   {
     Name: 'Terminus',
     Image: 'terminus.jpg',
@@ -25,16 +25,26 @@ export const MAPS = [
   }
 ];
 
+export const BO7MAPS = [
+  {
+    Name: 'Ashes of the Damned',
+    Image: 'ashes.jpg',
+    State: 'Soon',
+    Component: TerminusPage
+  },
+];
+
 export const GAMES = [
   {
-    Name: 'bo6',
+    Name: 'Black Ops 6',
     Image: 'bo6.jpg',
     Link: '/bo6',
   },
   {
-    Name: 'bo7',
+    Name: 'Black Ops 7',
     Image: 'bo7.jpg',
     Link: '/bo7',
+    State: 'New',
   }
 ];
 

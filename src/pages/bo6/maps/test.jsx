@@ -14,7 +14,7 @@ export default function Reckoning() {
         />
       </Head>
 
-      <MapPageContent mapName="test">
+      <MapPageContent mapName="test" game="bo6">
         <ReckoningPage />
       </MapPageContent>
     </>

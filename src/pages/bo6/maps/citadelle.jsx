@@ -13,7 +13,7 @@ export default function Citadelle() {
           content="Solve the Call of Duty Black Ops 6 Zombies Citadelle des Morts Easter Egg. Use this symbols puzzle solvers for Citadelle des Morts."
         />
       </Head>
-      <MapPageContent mapName="Citadelle des Morts">
+      <MapPageContent mapName="Citadelle des Morts" game="bo6">
         <CitadellePage />
       </MapPageContent>
     </>

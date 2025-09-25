@@ -575,6 +575,13 @@ body {
   border-bottom: 2px solid rgb(255, 255, 255); 
 }
 
+.words-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 
 @keyframes fadeIn {
   from {

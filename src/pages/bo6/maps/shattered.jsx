@@ -7,10 +7,10 @@ export default function Citadelle() {
   return (
     <>
       <Head>
-        <title>Citadelle des Morts Easter Egg - BO6 Zombies Puzzles Solvers</title>
+        <title>Shattered Veil Easter Egg - BO6 Zombies Puzzles Solvers</title>
         <meta
           name="description"
-          content="Solve the Call of Duty Black Ops 6 Zombies Citadelle des Morts Easter Egg. Use this symbols puzzle solvers for Citadelle des Morts."
+          content="Solve the Call of Duty Black Ops 6 Zombies Shattered Easter Egg. Use this MK2 board code puzzle solver for Shattered Veil."
         />
       </Head>
       <MapPageContent mapName="Shattered Veil" game="bo6">

@@ -18,6 +18,12 @@ export const BO6MAPS = [
     Component: CitadellePage
   },
   {
+    Name: 'Shattered Veil',
+    Image: 'shattered.jpg',
+    Link: '/bo6/maps/shattered',
+    State: 'New',
+  },
+  {
     Name: 'Reckoning',
     Image: 'reckoning.jpg',
     Link: '/bo6/maps/reckoning',

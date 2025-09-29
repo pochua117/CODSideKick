@@ -19,4 +19,9 @@ export const adsConfig = {
     right: "6816005309",
     down: "3747471336",
   },
+  "Shattered Veil": {
+    left: "6909618425",
+    right: "5596536757",
+    down: "9058744394"
+  }
 };

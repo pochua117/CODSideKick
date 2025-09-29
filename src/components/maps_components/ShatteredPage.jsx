@@ -100,7 +100,7 @@ const ShatteredgPage = () => {
     <div className="container">
     <div className="reckoning-container">
         <div className="puzzle-header">
-            <h2 className="symbols-title">MK2 Code Board Puzzle Solver</h2>
+            <h2 className="symbols-title shattered-title">MK2 Code Board Puzzle Solver</h2>
             <h3 className="reckoning-subtitle">
               Solve the Raygun MK2 board code puzzle. Select the board and the word.
             </h3>
@@ -108,13 +108,13 @@ const ShatteredgPage = () => {
           <h3 className="result">
             Select the printer word
           </h3>
-        <div className="objects-section">
+        <div className="shattered-objects-section objects-section">
             <ItemSelection key={2} allButtons={wordsButtons} selected={selectedWord} setSelected={setSelectedWord} maxLength={1} />
         </div>
           <h3 className="result">
             Select the board top left group
           </h3>
-        <div className="objects-section">
+        <div className="shattered-objects-section objects-section">
             <ItemSelection key={1} allButtons={boardsButtons.map(btn => ({...btn,number: btn.number.join(",")}))} selected={selectedBoard} setSelected={setSelectedBoard} maxLength={1} />
         </div>
         <div className="result">

@@ -811,6 +811,14 @@ body {
   height: 40px;
 }
 
+.shattered-title {
+  font-size: 23px;
+}
+
+.shattered-objects-section button {
+  padding: 10px 15px;
+}
+
 
 }
 
@@ -1109,6 +1117,10 @@ body {
   width: 90px;
   gap: .35rem;
   padding: 5px 5px;
+}
+
+.shattered-objects-section {
+  margin-bottom: 20px;
 }
 }
 

@@ -112,7 +112,7 @@ const ShatteredgPage = () => {
             <ItemSelection key={2} allButtons={wordsButtons} selected={selectedWord} setSelected={setSelectedWord} maxLength={1} />
         </div>
           <h3 className="result">
-            Select the board top left group
+            Select the group at the top left of the board
           </h3>
         <div className="shattered-objects-section objects-section">
             <ItemSelection key={1} allButtons={boardsButtons.map(btn => ({...btn,number: btn.number.join(",")}))} selected={selectedBoard} setSelected={setSelectedBoard} maxLength={1} />

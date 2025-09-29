@@ -18,7 +18,7 @@ const ShatteredgPage = () => {
     {
     number: "CRAB",
     content: (
-      <div>
+      <div className="board-item">
         CRAB
       </div>
     ),
@@ -26,7 +26,7 @@ const ShatteredgPage = () => {
   {
     number: "YETI",
     content: (
-      <div>
+      <div className="board-item">
         YETI
       </div>
     ),
@@ -34,7 +34,7 @@ const ShatteredgPage = () => {
   {
     number: "MOTH",
     content: (
-      <div>
+      <div className="board-item">
         MOTH
       </div>
     ),
@@ -42,7 +42,7 @@ const ShatteredgPage = () => {
   {
     number: "WORM",
     content: (
-      <div>
+      <div className="board-item">
         WORM
       </div>
     ),
@@ -53,7 +53,7 @@ const ShatteredgPage = () => {
     {
     number: ["BCDEF", "XYZ", "GHILNO", "M", "JKQU", "APRSTVW"],
     content: (
-        <div>
+        <div className="board-item">
             BCDEF
         </div>
     )
@@ -61,7 +61,7 @@ const ShatteredgPage = () => {
    {
     number: ["OSTUHJLD", "QPGAFR", "YKZWX", "NI", "ECVB", "M"],
     content: (
-        <div>
+        <div className="board-item">
             OSTUHJLD
         </div>
     )
@@ -69,7 +69,7 @@ const ShatteredgPage = () => {
    {
     number: ["E", "BCDSTVWXZ", "KLMNPQR", "OUY", "FGHJ", "AI"],
     content: (
-        <div>
+        <div className="board-item">
             E
         </div>
     )
@@ -77,7 +77,7 @@ const ShatteredgPage = () => {
    {
     number: ["AIOUY", "QX", "BCDEFGH", "S", "LMNPRTVW", "JKZ"],
     content: (
-        <div>
+        <div className="board-item">
             AIOUY
         </div>
     )
@@ -98,15 +98,22 @@ const ShatteredgPage = () => {
 
   return (
     <div className="container">
+    <div className="reckoning-container">
         <div className="puzzle-header">
-            <h2 className="symbols-title">Board Puzzle Solver</h2>
-            <h3 className="symbols-subtitle">
-                Solve the Shattered Veil puzzle by finding the words and boards that match the letters of the selected word. On this page, you can see each board with its symbols for reference.
+            <h2 className="symbols-title">MK2 Code Board Puzzle Solver</h2>
+            <h3 className="reckoning-subtitle">
+              Solve the Raygun MK2 board code puzzle. Select the board and the word.
             </h3>
         </div>
+          <h3 className="result">
+            Select the printer word
+          </h3>
         <div className="objects-section">
             <ItemSelection key={2} allButtons={wordsButtons} selected={selectedWord} setSelected={setSelectedWord} maxLength={1} />
         </div>
+          <h3 className="result">
+            Select the board top left group
+          </h3>
         <div className="objects-section">
             <ItemSelection key={1} allButtons={boardsButtons.map(btn => ({...btn,number: btn.number.join(",")}))} selected={selectedBoard} setSelected={setSelectedBoard} maxLength={1} />
         </div>
@@ -125,6 +132,7 @@ const ShatteredgPage = () => {
             ))
         }
         </div>
+    </div>
     </div>
   );
 };

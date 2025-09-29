@@ -582,6 +582,10 @@ body {
   margin-bottom: 20px;
 }
 
+.board-item {
+  display: flex;
+  justify-content: center;
+}
 
 @keyframes fadeIn {
   from {

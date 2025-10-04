@@ -97,9 +97,9 @@ body {
 .soon-card::after {
   content: "Soon";
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, +50%);
   background: rgba(0, 0, 0, 0);
   color: #Ff7e00;
   font-size: 1.5rem;
@@ -113,9 +113,9 @@ body {
 .new-card::after {
   content: "New";
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, +50%);
   background: rgba(0, 0, 0, 0);
   color: rgb(0, 255, 21);
   font-size: 1.5rem;
@@ -649,17 +649,18 @@ body {
   }
 
   .map-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(20px, 0.5fr));
+    gap: 15px;
   }
 
   .card {
     width: 100%;
-    height: 220px;
+    height: 200px;
   }
 
   .new-card {
     width: 100%;
-    height: 220px;
+    height: 200px;
   }
 
   .new-card::after {
@@ -837,13 +838,14 @@ body {
     margin-bottom: 24px;
   }
 
-  .map-list {
-    grid-template-columns: 1fr;
-  }
-
   .card {
     width: 100%;
-    height: 220px;
+    height: 150px
+  }
+
+  .new-card {
+    width: 100%;
+    height: 150px;
   }
 
   .card-text {
@@ -952,6 +954,10 @@ body {
   }
 
   .card {
+    height: 180px;
+  }
+
+  .new-card {
     height: 180px;
   }
 

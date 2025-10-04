@@ -669,7 +669,7 @@ body {
 
   .soon-card {
     width: 100%;
-    height: 220px;
+    height: 200px;
   }
 
   .soon-card::after {
@@ -844,6 +844,11 @@ body {
   }
 
   .new-card {
+    width: 100%;
+    height: 150px;
+  }
+
+  .soon-card {
     width: 100%;
     height: 150px;
   }
